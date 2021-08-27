@@ -129,197 +129,197 @@ TodoList/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/build
 .PHONY : TodoList/fast
 
-BasicInfo.o: BasicInfo.c.o
-.PHONY : BasicInfo.o
+BasicInfoMac.o: BasicInfoMac.c.o
+.PHONY : BasicInfoMac.o
 
 # target to build an object file
-BasicInfo.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/BasicInfo.c.o
-.PHONY : BasicInfo.c.o
+BasicInfoMac.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/BasicInfoMac.c.o
+.PHONY : BasicInfoMac.c.o
 
-BasicInfo.i: BasicInfo.c.i
-.PHONY : BasicInfo.i
+BasicInfoMac.i: BasicInfoMac.c.i
+.PHONY : BasicInfoMac.i
 
 # target to preprocess a source file
-BasicInfo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/BasicInfo.c.i
-.PHONY : BasicInfo.c.i
+BasicInfoMac.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/BasicInfoMac.c.i
+.PHONY : BasicInfoMac.c.i
 
-BasicInfo.s: BasicInfo.c.s
-.PHONY : BasicInfo.s
+BasicInfoMac.s: BasicInfoMac.c.s
+.PHONY : BasicInfoMac.s
 
 # target to generate assembly for a file
-BasicInfo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/BasicInfo.c.s
-.PHONY : BasicInfo.c.s
+BasicInfoMac.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/BasicInfoMac.c.s
+.PHONY : BasicInfoMac.c.s
 
-CompleteCheck.o: CompleteCheck.c.o
-.PHONY : CompleteCheck.o
+CompleteCheckMac.o: CompleteCheckMac.c.o
+.PHONY : CompleteCheckMac.o
 
 # target to build an object file
-CompleteCheck.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/CompleteCheck.c.o
-.PHONY : CompleteCheck.c.o
+CompleteCheckMac.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/CompleteCheckMac.c.o
+.PHONY : CompleteCheckMac.c.o
 
-CompleteCheck.i: CompleteCheck.c.i
-.PHONY : CompleteCheck.i
+CompleteCheckMac.i: CompleteCheckMac.c.i
+.PHONY : CompleteCheckMac.i
 
 # target to preprocess a source file
-CompleteCheck.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/CompleteCheck.c.i
-.PHONY : CompleteCheck.c.i
+CompleteCheckMac.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/CompleteCheckMac.c.i
+.PHONY : CompleteCheckMac.c.i
 
-CompleteCheck.s: CompleteCheck.c.s
-.PHONY : CompleteCheck.s
+CompleteCheckMac.s: CompleteCheckMac.c.s
+.PHONY : CompleteCheckMac.s
 
 # target to generate assembly for a file
-CompleteCheck.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/CompleteCheck.c.s
-.PHONY : CompleteCheck.c.s
+CompleteCheckMac.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/CompleteCheckMac.c.s
+.PHONY : CompleteCheckMac.c.s
 
-DeleteTodoList.o: DeleteTodoList.c.o
-.PHONY : DeleteTodoList.o
+DeleteTodoListMac.o: DeleteTodoListMac.c.o
+.PHONY : DeleteTodoListMac.o
 
 # target to build an object file
-DeleteTodoList.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/DeleteTodoList.c.o
-.PHONY : DeleteTodoList.c.o
+DeleteTodoListMac.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/DeleteTodoListMac.c.o
+.PHONY : DeleteTodoListMac.c.o
 
-DeleteTodoList.i: DeleteTodoList.c.i
-.PHONY : DeleteTodoList.i
+DeleteTodoListMac.i: DeleteTodoListMac.c.i
+.PHONY : DeleteTodoListMac.i
 
 # target to preprocess a source file
-DeleteTodoList.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/DeleteTodoList.c.i
-.PHONY : DeleteTodoList.c.i
+DeleteTodoListMac.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/DeleteTodoListMac.c.i
+.PHONY : DeleteTodoListMac.c.i
 
-DeleteTodoList.s: DeleteTodoList.c.s
-.PHONY : DeleteTodoList.s
+DeleteTodoListMac.s: DeleteTodoListMac.c.s
+.PHONY : DeleteTodoListMac.s
 
 # target to generate assembly for a file
-DeleteTodoList.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/DeleteTodoList.c.s
-.PHONY : DeleteTodoList.c.s
+DeleteTodoListMac.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/DeleteTodoListMac.c.s
+.PHONY : DeleteTodoListMac.c.s
 
-EditDate.o: EditDate.c.o
-.PHONY : EditDate.o
+EditDateMac.o: EditDateMac.c.o
+.PHONY : EditDateMac.o
 
 # target to build an object file
-EditDate.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditDate.c.o
-.PHONY : EditDate.c.o
+EditDateMac.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditDateMac.c.o
+.PHONY : EditDateMac.c.o
 
-EditDate.i: EditDate.c.i
-.PHONY : EditDate.i
+EditDateMac.i: EditDateMac.c.i
+.PHONY : EditDateMac.i
 
 # target to preprocess a source file
-EditDate.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditDate.c.i
-.PHONY : EditDate.c.i
+EditDateMac.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditDateMac.c.i
+.PHONY : EditDateMac.c.i
 
-EditDate.s: EditDate.c.s
-.PHONY : EditDate.s
+EditDateMac.s: EditDateMac.c.s
+.PHONY : EditDateMac.s
 
 # target to generate assembly for a file
-EditDate.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditDate.c.s
-.PHONY : EditDate.c.s
+EditDateMac.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditDateMac.c.s
+.PHONY : EditDateMac.c.s
 
-EditImportance.o: EditImportance.c.o
-.PHONY : EditImportance.o
+EditImportanceMac.o: EditImportanceMac.c.o
+.PHONY : EditImportanceMac.o
 
 # target to build an object file
-EditImportance.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditImportance.c.o
-.PHONY : EditImportance.c.o
+EditImportanceMac.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditImportanceMac.c.o
+.PHONY : EditImportanceMac.c.o
 
-EditImportance.i: EditImportance.c.i
-.PHONY : EditImportance.i
+EditImportanceMac.i: EditImportanceMac.c.i
+.PHONY : EditImportanceMac.i
 
 # target to preprocess a source file
-EditImportance.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditImportance.c.i
-.PHONY : EditImportance.c.i
+EditImportanceMac.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditImportanceMac.c.i
+.PHONY : EditImportanceMac.c.i
 
-EditImportance.s: EditImportance.c.s
-.PHONY : EditImportance.s
+EditImportanceMac.s: EditImportanceMac.c.s
+.PHONY : EditImportanceMac.s
 
 # target to generate assembly for a file
-EditImportance.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditImportance.c.s
-.PHONY : EditImportance.c.s
+EditImportanceMac.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditImportanceMac.c.s
+.PHONY : EditImportanceMac.c.s
 
-EditTodoList.o: EditTodoList.c.o
-.PHONY : EditTodoList.o
+EditTodoListMac.o: EditTodoListMac.c.o
+.PHONY : EditTodoListMac.o
 
 # target to build an object file
-EditTodoList.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditTodoList.c.o
-.PHONY : EditTodoList.c.o
+EditTodoListMac.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditTodoListMac.c.o
+.PHONY : EditTodoListMac.c.o
 
-EditTodoList.i: EditTodoList.c.i
-.PHONY : EditTodoList.i
+EditTodoListMac.i: EditTodoListMac.c.i
+.PHONY : EditTodoListMac.i
 
 # target to preprocess a source file
-EditTodoList.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditTodoList.c.i
-.PHONY : EditTodoList.c.i
+EditTodoListMac.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditTodoListMac.c.i
+.PHONY : EditTodoListMac.c.i
 
-EditTodoList.s: EditTodoList.c.s
-.PHONY : EditTodoList.s
+EditTodoListMac.s: EditTodoListMac.c.s
+.PHONY : EditTodoListMac.s
 
 # target to generate assembly for a file
-EditTodoList.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditTodoList.c.s
-.PHONY : EditTodoList.c.s
+EditTodoListMac.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/EditTodoListMac.c.s
+.PHONY : EditTodoListMac.c.s
 
-InputTodoList.o: InputTodoList.c.o
-.PHONY : InputTodoList.o
+InputTodoListMac.o: InputTodoListMac.c.o
+.PHONY : InputTodoListMac.o
 
 # target to build an object file
-InputTodoList.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/InputTodoList.c.o
-.PHONY : InputTodoList.c.o
+InputTodoListMac.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/InputTodoListMac.c.o
+.PHONY : InputTodoListMac.c.o
 
-InputTodoList.i: InputTodoList.c.i
-.PHONY : InputTodoList.i
+InputTodoListMac.i: InputTodoListMac.c.i
+.PHONY : InputTodoListMac.i
 
 # target to preprocess a source file
-InputTodoList.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/InputTodoList.c.i
-.PHONY : InputTodoList.c.i
+InputTodoListMac.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/InputTodoListMac.c.i
+.PHONY : InputTodoListMac.c.i
 
-InputTodoList.s: InputTodoList.c.s
-.PHONY : InputTodoList.s
+InputTodoListMac.s: InputTodoListMac.c.s
+.PHONY : InputTodoListMac.s
 
 # target to generate assembly for a file
-InputTodoList.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/InputTodoList.c.s
-.PHONY : InputTodoList.c.s
+InputTodoListMac.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/InputTodoListMac.c.s
+.PHONY : InputTodoListMac.c.s
 
-main.o: main.c.o
-.PHONY : main.o
+mainMac.o: mainMac.c.o
+.PHONY : mainMac.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/main.c.o
-.PHONY : main.c.o
+mainMac.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/mainMac.c.o
+.PHONY : mainMac.c.o
 
-main.i: main.c.i
-.PHONY : main.i
+mainMac.i: mainMac.c.i
+.PHONY : mainMac.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/main.c.i
-.PHONY : main.c.i
+mainMac.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/mainMac.c.i
+.PHONY : mainMac.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+mainMac.s: mainMac.c.s
+.PHONY : mainMac.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/main.c.s
-.PHONY : main.c.s
+mainMac.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TodoList.dir/build.make CMakeFiles/TodoList.dir/mainMac.c.s
+.PHONY : mainMac.c.s
 
 # Help Target
 help:
@@ -330,30 +330,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... TodoList"
-	@echo "... BasicInfo.o"
-	@echo "... BasicInfo.i"
-	@echo "... BasicInfo.s"
-	@echo "... CompleteCheck.o"
-	@echo "... CompleteCheck.i"
-	@echo "... CompleteCheck.s"
-	@echo "... DeleteTodoList.o"
-	@echo "... DeleteTodoList.i"
-	@echo "... DeleteTodoList.s"
-	@echo "... EditDate.o"
-	@echo "... EditDate.i"
-	@echo "... EditDate.s"
-	@echo "... EditImportance.o"
-	@echo "... EditImportance.i"
-	@echo "... EditImportance.s"
-	@echo "... EditTodoList.o"
-	@echo "... EditTodoList.i"
-	@echo "... EditTodoList.s"
-	@echo "... InputTodoList.o"
-	@echo "... InputTodoList.i"
-	@echo "... InputTodoList.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... BasicInfoMac.o"
+	@echo "... BasicInfoMac.i"
+	@echo "... BasicInfoMac.s"
+	@echo "... CompleteCheckMac.o"
+	@echo "... CompleteCheckMac.i"
+	@echo "... CompleteCheckMac.s"
+	@echo "... DeleteTodoListMac.o"
+	@echo "... DeleteTodoListMac.i"
+	@echo "... DeleteTodoListMac.s"
+	@echo "... EditDateMac.o"
+	@echo "... EditDateMac.i"
+	@echo "... EditDateMac.s"
+	@echo "... EditImportanceMac.o"
+	@echo "... EditImportanceMac.i"
+	@echo "... EditImportanceMac.s"
+	@echo "... EditTodoListMac.o"
+	@echo "... EditTodoListMac.i"
+	@echo "... EditTodoListMac.s"
+	@echo "... InputTodoListMac.o"
+	@echo "... InputTodoListMac.i"
+	@echo "... InputTodoListMac.s"
+	@echo "... mainMac.o"
+	@echo "... mainMac.i"
+	@echo "... mainMac.s"
 .PHONY : help
 
 

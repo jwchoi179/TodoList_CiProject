@@ -2,19 +2,19 @@ project(TodoList)
 
 add_executable(
     TodoList
-    BasicInfo.h
-    BasicInfo.c
-    CompleteCheck.c
-    CompleteCheck.h
-    DeleteTodoList.c
-    DeleteTodoList.h
-    EditDate.c
-    EditDate.h
-    EditImportance.c
-    EditImportance.h
-    EditTodoList.c
-    EditTodoList.h
-    InputTodoList.c
-    InputTodoList.h
-    main.c
+    BasicInfoMac.h
+    BasicInfoMac.c
+    CompleteCheckMac.c
+    CompleteCheckMac.h
+    DeleteTodoListMac.c
+    DeleteTodoListMac.h
+    EditDateMac.c
+    EditDateMac.h
+    EditImportanceMac.c
+    EditImportanceMac.h
+    EditTodoListMac.c
+    EditTodoListMac.h
+    InputTodoListMac.c
+    InputTodoListMac.h
+    mainMac.c
 )

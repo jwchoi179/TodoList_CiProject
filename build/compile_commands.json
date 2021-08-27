@@ -1,42 +1,42 @@
 [
 {
   "directory": "/Users/choijiwoong/Programming/CiProject/build",
-  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/BasicInfo.c.o -c /Users/choijiwoong/Programming/CiProject/BasicInfo.c",
-  "file": "/Users/choijiwoong/Programming/CiProject/BasicInfo.c"
+  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/BasicInfoMac.c.o -c /Users/choijiwoong/Programming/CiProject/BasicInfoMac.c",
+  "file": "/Users/choijiwoong/Programming/CiProject/BasicInfoMac.c"
 },
 {
   "directory": "/Users/choijiwoong/Programming/CiProject/build",
-  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/CompleteCheck.c.o -c /Users/choijiwoong/Programming/CiProject/CompleteCheck.c",
-  "file": "/Users/choijiwoong/Programming/CiProject/CompleteCheck.c"
+  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/CompleteCheckMac.c.o -c /Users/choijiwoong/Programming/CiProject/CompleteCheckMac.c",
+  "file": "/Users/choijiwoong/Programming/CiProject/CompleteCheckMac.c"
 },
 {
   "directory": "/Users/choijiwoong/Programming/CiProject/build",
-  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/DeleteTodoList.c.o -c /Users/choijiwoong/Programming/CiProject/DeleteTodoList.c",
-  "file": "/Users/choijiwoong/Programming/CiProject/DeleteTodoList.c"
+  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/DeleteTodoListMac.c.o -c /Users/choijiwoong/Programming/CiProject/DeleteTodoListMac.c",
+  "file": "/Users/choijiwoong/Programming/CiProject/DeleteTodoListMac.c"
 },
 {
   "directory": "/Users/choijiwoong/Programming/CiProject/build",
-  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/EditDate.c.o -c /Users/choijiwoong/Programming/CiProject/EditDate.c",
-  "file": "/Users/choijiwoong/Programming/CiProject/EditDate.c"
+  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/EditDateMac.c.o -c /Users/choijiwoong/Programming/CiProject/EditDateMac.c",
+  "file": "/Users/choijiwoong/Programming/CiProject/EditDateMac.c"
 },
 {
   "directory": "/Users/choijiwoong/Programming/CiProject/build",
-  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/EditImportance.c.o -c /Users/choijiwoong/Programming/CiProject/EditImportance.c",
-  "file": "/Users/choijiwoong/Programming/CiProject/EditImportance.c"
+  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/EditImportanceMac.c.o -c /Users/choijiwoong/Programming/CiProject/EditImportanceMac.c",
+  "file": "/Users/choijiwoong/Programming/CiProject/EditImportanceMac.c"
 },
 {
   "directory": "/Users/choijiwoong/Programming/CiProject/build",
-  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/EditTodoList.c.o -c /Users/choijiwoong/Programming/CiProject/EditTodoList.c",
-  "file": "/Users/choijiwoong/Programming/CiProject/EditTodoList.c"
+  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/EditTodoListMac.c.o -c /Users/choijiwoong/Programming/CiProject/EditTodoListMac.c",
+  "file": "/Users/choijiwoong/Programming/CiProject/EditTodoListMac.c"
 },
 {
   "directory": "/Users/choijiwoong/Programming/CiProject/build",
-  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/InputTodoList.c.o -c /Users/choijiwoong/Programming/CiProject/InputTodoList.c",
-  "file": "/Users/choijiwoong/Programming/CiProject/InputTodoList.c"
+  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/InputTodoListMac.c.o -c /Users/choijiwoong/Programming/CiProject/InputTodoListMac.c",
+  "file": "/Users/choijiwoong/Programming/CiProject/InputTodoListMac.c"
 },
 {
   "directory": "/Users/choijiwoong/Programming/CiProject/build",
-  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/main.c.o -c /Users/choijiwoong/Programming/CiProject/main.c",
-  "file": "/Users/choijiwoong/Programming/CiProject/main.c"
+  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -o CMakeFiles/TodoList.dir/mainMac.c.o -c /Users/choijiwoong/Programming/CiProject/mainMac.c",
+  "file": "/Users/choijiwoong/Programming/CiProject/mainMac.c"
 }
 ]

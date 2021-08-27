@@ -69,140 +69,140 @@ include CMakeFiles/TodoList.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TodoList.dir/flags.make
 
-CMakeFiles/TodoList.dir/BasicInfo.c.o: CMakeFiles/TodoList.dir/flags.make
-CMakeFiles/TodoList.dir/BasicInfo.c.o: ../BasicInfo.c
-CMakeFiles/TodoList.dir/BasicInfo.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/TodoList.dir/BasicInfo.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/BasicInfo.c.o -MF CMakeFiles/TodoList.dir/BasicInfo.c.o.d -o CMakeFiles/TodoList.dir/BasicInfo.c.o -c /Users/choijiwoong/Programming/CiProject/BasicInfo.c
+CMakeFiles/TodoList.dir/BasicInfoMac.c.o: CMakeFiles/TodoList.dir/flags.make
+CMakeFiles/TodoList.dir/BasicInfoMac.c.o: ../BasicInfoMac.c
+CMakeFiles/TodoList.dir/BasicInfoMac.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/TodoList.dir/BasicInfoMac.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/BasicInfoMac.c.o -MF CMakeFiles/TodoList.dir/BasicInfoMac.c.o.d -o CMakeFiles/TodoList.dir/BasicInfoMac.c.o -c /Users/choijiwoong/Programming/CiProject/BasicInfoMac.c
 
-CMakeFiles/TodoList.dir/BasicInfo.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/BasicInfo.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/BasicInfo.c > CMakeFiles/TodoList.dir/BasicInfo.c.i
+CMakeFiles/TodoList.dir/BasicInfoMac.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/BasicInfoMac.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/BasicInfoMac.c > CMakeFiles/TodoList.dir/BasicInfoMac.c.i
 
-CMakeFiles/TodoList.dir/BasicInfo.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/BasicInfo.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/BasicInfo.c -o CMakeFiles/TodoList.dir/BasicInfo.c.s
+CMakeFiles/TodoList.dir/BasicInfoMac.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/BasicInfoMac.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/BasicInfoMac.c -o CMakeFiles/TodoList.dir/BasicInfoMac.c.s
 
-CMakeFiles/TodoList.dir/CompleteCheck.c.o: CMakeFiles/TodoList.dir/flags.make
-CMakeFiles/TodoList.dir/CompleteCheck.c.o: ../CompleteCheck.c
-CMakeFiles/TodoList.dir/CompleteCheck.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/TodoList.dir/CompleteCheck.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/CompleteCheck.c.o -MF CMakeFiles/TodoList.dir/CompleteCheck.c.o.d -o CMakeFiles/TodoList.dir/CompleteCheck.c.o -c /Users/choijiwoong/Programming/CiProject/CompleteCheck.c
+CMakeFiles/TodoList.dir/CompleteCheckMac.c.o: CMakeFiles/TodoList.dir/flags.make
+CMakeFiles/TodoList.dir/CompleteCheckMac.c.o: ../CompleteCheckMac.c
+CMakeFiles/TodoList.dir/CompleteCheckMac.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/TodoList.dir/CompleteCheckMac.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/CompleteCheckMac.c.o -MF CMakeFiles/TodoList.dir/CompleteCheckMac.c.o.d -o CMakeFiles/TodoList.dir/CompleteCheckMac.c.o -c /Users/choijiwoong/Programming/CiProject/CompleteCheckMac.c
 
-CMakeFiles/TodoList.dir/CompleteCheck.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/CompleteCheck.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/CompleteCheck.c > CMakeFiles/TodoList.dir/CompleteCheck.c.i
+CMakeFiles/TodoList.dir/CompleteCheckMac.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/CompleteCheckMac.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/CompleteCheckMac.c > CMakeFiles/TodoList.dir/CompleteCheckMac.c.i
 
-CMakeFiles/TodoList.dir/CompleteCheck.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/CompleteCheck.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/CompleteCheck.c -o CMakeFiles/TodoList.dir/CompleteCheck.c.s
+CMakeFiles/TodoList.dir/CompleteCheckMac.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/CompleteCheckMac.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/CompleteCheckMac.c -o CMakeFiles/TodoList.dir/CompleteCheckMac.c.s
 
-CMakeFiles/TodoList.dir/DeleteTodoList.c.o: CMakeFiles/TodoList.dir/flags.make
-CMakeFiles/TodoList.dir/DeleteTodoList.c.o: ../DeleteTodoList.c
-CMakeFiles/TodoList.dir/DeleteTodoList.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/TodoList.dir/DeleteTodoList.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/DeleteTodoList.c.o -MF CMakeFiles/TodoList.dir/DeleteTodoList.c.o.d -o CMakeFiles/TodoList.dir/DeleteTodoList.c.o -c /Users/choijiwoong/Programming/CiProject/DeleteTodoList.c
+CMakeFiles/TodoList.dir/DeleteTodoListMac.c.o: CMakeFiles/TodoList.dir/flags.make
+CMakeFiles/TodoList.dir/DeleteTodoListMac.c.o: ../DeleteTodoListMac.c
+CMakeFiles/TodoList.dir/DeleteTodoListMac.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/TodoList.dir/DeleteTodoListMac.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/DeleteTodoListMac.c.o -MF CMakeFiles/TodoList.dir/DeleteTodoListMac.c.o.d -o CMakeFiles/TodoList.dir/DeleteTodoListMac.c.o -c /Users/choijiwoong/Programming/CiProject/DeleteTodoListMac.c
 
-CMakeFiles/TodoList.dir/DeleteTodoList.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/DeleteTodoList.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/DeleteTodoList.c > CMakeFiles/TodoList.dir/DeleteTodoList.c.i
+CMakeFiles/TodoList.dir/DeleteTodoListMac.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/DeleteTodoListMac.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/DeleteTodoListMac.c > CMakeFiles/TodoList.dir/DeleteTodoListMac.c.i
 
-CMakeFiles/TodoList.dir/DeleteTodoList.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/DeleteTodoList.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/DeleteTodoList.c -o CMakeFiles/TodoList.dir/DeleteTodoList.c.s
+CMakeFiles/TodoList.dir/DeleteTodoListMac.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/DeleteTodoListMac.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/DeleteTodoListMac.c -o CMakeFiles/TodoList.dir/DeleteTodoListMac.c.s
 
-CMakeFiles/TodoList.dir/EditDate.c.o: CMakeFiles/TodoList.dir/flags.make
-CMakeFiles/TodoList.dir/EditDate.c.o: ../EditDate.c
-CMakeFiles/TodoList.dir/EditDate.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/TodoList.dir/EditDate.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/EditDate.c.o -MF CMakeFiles/TodoList.dir/EditDate.c.o.d -o CMakeFiles/TodoList.dir/EditDate.c.o -c /Users/choijiwoong/Programming/CiProject/EditDate.c
+CMakeFiles/TodoList.dir/EditDateMac.c.o: CMakeFiles/TodoList.dir/flags.make
+CMakeFiles/TodoList.dir/EditDateMac.c.o: ../EditDateMac.c
+CMakeFiles/TodoList.dir/EditDateMac.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/TodoList.dir/EditDateMac.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/EditDateMac.c.o -MF CMakeFiles/TodoList.dir/EditDateMac.c.o.d -o CMakeFiles/TodoList.dir/EditDateMac.c.o -c /Users/choijiwoong/Programming/CiProject/EditDateMac.c
 
-CMakeFiles/TodoList.dir/EditDate.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/EditDate.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/EditDate.c > CMakeFiles/TodoList.dir/EditDate.c.i
+CMakeFiles/TodoList.dir/EditDateMac.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/EditDateMac.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/EditDateMac.c > CMakeFiles/TodoList.dir/EditDateMac.c.i
 
-CMakeFiles/TodoList.dir/EditDate.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/EditDate.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/EditDate.c -o CMakeFiles/TodoList.dir/EditDate.c.s
+CMakeFiles/TodoList.dir/EditDateMac.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/EditDateMac.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/EditDateMac.c -o CMakeFiles/TodoList.dir/EditDateMac.c.s
 
-CMakeFiles/TodoList.dir/EditImportance.c.o: CMakeFiles/TodoList.dir/flags.make
-CMakeFiles/TodoList.dir/EditImportance.c.o: ../EditImportance.c
-CMakeFiles/TodoList.dir/EditImportance.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/TodoList.dir/EditImportance.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/EditImportance.c.o -MF CMakeFiles/TodoList.dir/EditImportance.c.o.d -o CMakeFiles/TodoList.dir/EditImportance.c.o -c /Users/choijiwoong/Programming/CiProject/EditImportance.c
+CMakeFiles/TodoList.dir/EditImportanceMac.c.o: CMakeFiles/TodoList.dir/flags.make
+CMakeFiles/TodoList.dir/EditImportanceMac.c.o: ../EditImportanceMac.c
+CMakeFiles/TodoList.dir/EditImportanceMac.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/TodoList.dir/EditImportanceMac.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/EditImportanceMac.c.o -MF CMakeFiles/TodoList.dir/EditImportanceMac.c.o.d -o CMakeFiles/TodoList.dir/EditImportanceMac.c.o -c /Users/choijiwoong/Programming/CiProject/EditImportanceMac.c
 
-CMakeFiles/TodoList.dir/EditImportance.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/EditImportance.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/EditImportance.c > CMakeFiles/TodoList.dir/EditImportance.c.i
+CMakeFiles/TodoList.dir/EditImportanceMac.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/EditImportanceMac.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/EditImportanceMac.c > CMakeFiles/TodoList.dir/EditImportanceMac.c.i
 
-CMakeFiles/TodoList.dir/EditImportance.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/EditImportance.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/EditImportance.c -o CMakeFiles/TodoList.dir/EditImportance.c.s
+CMakeFiles/TodoList.dir/EditImportanceMac.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/EditImportanceMac.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/EditImportanceMac.c -o CMakeFiles/TodoList.dir/EditImportanceMac.c.s
 
-CMakeFiles/TodoList.dir/EditTodoList.c.o: CMakeFiles/TodoList.dir/flags.make
-CMakeFiles/TodoList.dir/EditTodoList.c.o: ../EditTodoList.c
-CMakeFiles/TodoList.dir/EditTodoList.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/TodoList.dir/EditTodoList.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/EditTodoList.c.o -MF CMakeFiles/TodoList.dir/EditTodoList.c.o.d -o CMakeFiles/TodoList.dir/EditTodoList.c.o -c /Users/choijiwoong/Programming/CiProject/EditTodoList.c
+CMakeFiles/TodoList.dir/EditTodoListMac.c.o: CMakeFiles/TodoList.dir/flags.make
+CMakeFiles/TodoList.dir/EditTodoListMac.c.o: ../EditTodoListMac.c
+CMakeFiles/TodoList.dir/EditTodoListMac.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/TodoList.dir/EditTodoListMac.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/EditTodoListMac.c.o -MF CMakeFiles/TodoList.dir/EditTodoListMac.c.o.d -o CMakeFiles/TodoList.dir/EditTodoListMac.c.o -c /Users/choijiwoong/Programming/CiProject/EditTodoListMac.c
 
-CMakeFiles/TodoList.dir/EditTodoList.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/EditTodoList.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/EditTodoList.c > CMakeFiles/TodoList.dir/EditTodoList.c.i
+CMakeFiles/TodoList.dir/EditTodoListMac.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/EditTodoListMac.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/EditTodoListMac.c > CMakeFiles/TodoList.dir/EditTodoListMac.c.i
 
-CMakeFiles/TodoList.dir/EditTodoList.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/EditTodoList.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/EditTodoList.c -o CMakeFiles/TodoList.dir/EditTodoList.c.s
+CMakeFiles/TodoList.dir/EditTodoListMac.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/EditTodoListMac.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/EditTodoListMac.c -o CMakeFiles/TodoList.dir/EditTodoListMac.c.s
 
-CMakeFiles/TodoList.dir/InputTodoList.c.o: CMakeFiles/TodoList.dir/flags.make
-CMakeFiles/TodoList.dir/InputTodoList.c.o: ../InputTodoList.c
-CMakeFiles/TodoList.dir/InputTodoList.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/TodoList.dir/InputTodoList.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/InputTodoList.c.o -MF CMakeFiles/TodoList.dir/InputTodoList.c.o.d -o CMakeFiles/TodoList.dir/InputTodoList.c.o -c /Users/choijiwoong/Programming/CiProject/InputTodoList.c
+CMakeFiles/TodoList.dir/InputTodoListMac.c.o: CMakeFiles/TodoList.dir/flags.make
+CMakeFiles/TodoList.dir/InputTodoListMac.c.o: ../InputTodoListMac.c
+CMakeFiles/TodoList.dir/InputTodoListMac.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/TodoList.dir/InputTodoListMac.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/InputTodoListMac.c.o -MF CMakeFiles/TodoList.dir/InputTodoListMac.c.o.d -o CMakeFiles/TodoList.dir/InputTodoListMac.c.o -c /Users/choijiwoong/Programming/CiProject/InputTodoListMac.c
 
-CMakeFiles/TodoList.dir/InputTodoList.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/InputTodoList.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/InputTodoList.c > CMakeFiles/TodoList.dir/InputTodoList.c.i
+CMakeFiles/TodoList.dir/InputTodoListMac.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/InputTodoListMac.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/InputTodoListMac.c > CMakeFiles/TodoList.dir/InputTodoListMac.c.i
 
-CMakeFiles/TodoList.dir/InputTodoList.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/InputTodoList.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/InputTodoList.c -o CMakeFiles/TodoList.dir/InputTodoList.c.s
+CMakeFiles/TodoList.dir/InputTodoListMac.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/InputTodoListMac.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/InputTodoListMac.c -o CMakeFiles/TodoList.dir/InputTodoListMac.c.s
 
-CMakeFiles/TodoList.dir/main.c.o: CMakeFiles/TodoList.dir/flags.make
-CMakeFiles/TodoList.dir/main.c.o: ../main.c
-CMakeFiles/TodoList.dir/main.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/TodoList.dir/main.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/main.c.o -MF CMakeFiles/TodoList.dir/main.c.o.d -o CMakeFiles/TodoList.dir/main.c.o -c /Users/choijiwoong/Programming/CiProject/main.c
+CMakeFiles/TodoList.dir/mainMac.c.o: CMakeFiles/TodoList.dir/flags.make
+CMakeFiles/TodoList.dir/mainMac.c.o: ../mainMac.c
+CMakeFiles/TodoList.dir/mainMac.c.o: CMakeFiles/TodoList.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/TodoList.dir/mainMac.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TodoList.dir/mainMac.c.o -MF CMakeFiles/TodoList.dir/mainMac.c.o.d -o CMakeFiles/TodoList.dir/mainMac.c.o -c /Users/choijiwoong/Programming/CiProject/mainMac.c
 
-CMakeFiles/TodoList.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/main.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/main.c > CMakeFiles/TodoList.dir/main.c.i
+CMakeFiles/TodoList.dir/mainMac.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TodoList.dir/mainMac.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/choijiwoong/Programming/CiProject/mainMac.c > CMakeFiles/TodoList.dir/mainMac.c.i
 
-CMakeFiles/TodoList.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/main.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/main.c -o CMakeFiles/TodoList.dir/main.c.s
+CMakeFiles/TodoList.dir/mainMac.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TodoList.dir/mainMac.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/choijiwoong/Programming/CiProject/mainMac.c -o CMakeFiles/TodoList.dir/mainMac.c.s
 
 # Object files for target TodoList
 TodoList_OBJECTS = \
-"CMakeFiles/TodoList.dir/BasicInfo.c.o" \
-"CMakeFiles/TodoList.dir/CompleteCheck.c.o" \
-"CMakeFiles/TodoList.dir/DeleteTodoList.c.o" \
-"CMakeFiles/TodoList.dir/EditDate.c.o" \
-"CMakeFiles/TodoList.dir/EditImportance.c.o" \
-"CMakeFiles/TodoList.dir/EditTodoList.c.o" \
-"CMakeFiles/TodoList.dir/InputTodoList.c.o" \
-"CMakeFiles/TodoList.dir/main.c.o"
+"CMakeFiles/TodoList.dir/BasicInfoMac.c.o" \
+"CMakeFiles/TodoList.dir/CompleteCheckMac.c.o" \
+"CMakeFiles/TodoList.dir/DeleteTodoListMac.c.o" \
+"CMakeFiles/TodoList.dir/EditDateMac.c.o" \
+"CMakeFiles/TodoList.dir/EditImportanceMac.c.o" \
+"CMakeFiles/TodoList.dir/EditTodoListMac.c.o" \
+"CMakeFiles/TodoList.dir/InputTodoListMac.c.o" \
+"CMakeFiles/TodoList.dir/mainMac.c.o"
 
 # External object files for target TodoList
 TodoList_EXTERNAL_OBJECTS =
 
-TodoList: CMakeFiles/TodoList.dir/BasicInfo.c.o
-TodoList: CMakeFiles/TodoList.dir/CompleteCheck.c.o
-TodoList: CMakeFiles/TodoList.dir/DeleteTodoList.c.o
-TodoList: CMakeFiles/TodoList.dir/EditDate.c.o
-TodoList: CMakeFiles/TodoList.dir/EditImportance.c.o
-TodoList: CMakeFiles/TodoList.dir/EditTodoList.c.o
-TodoList: CMakeFiles/TodoList.dir/InputTodoList.c.o
-TodoList: CMakeFiles/TodoList.dir/main.c.o
+TodoList: CMakeFiles/TodoList.dir/BasicInfoMac.c.o
+TodoList: CMakeFiles/TodoList.dir/CompleteCheckMac.c.o
+TodoList: CMakeFiles/TodoList.dir/DeleteTodoListMac.c.o
+TodoList: CMakeFiles/TodoList.dir/EditDateMac.c.o
+TodoList: CMakeFiles/TodoList.dir/EditImportanceMac.c.o
+TodoList: CMakeFiles/TodoList.dir/EditTodoListMac.c.o
+TodoList: CMakeFiles/TodoList.dir/InputTodoListMac.c.o
+TodoList: CMakeFiles/TodoList.dir/mainMac.c.o
 TodoList: CMakeFiles/TodoList.dir/build.make
 TodoList: CMakeFiles/TodoList.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/choijiwoong/Programming/CiProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable TodoList"

@@ -8,14 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/choijiwoong/Programming/CiProject/BasicInfo.c" "CMakeFiles/TodoList.dir/BasicInfo.c.o" "gcc" "CMakeFiles/TodoList.dir/BasicInfo.c.o.d"
-  "/Users/choijiwoong/Programming/CiProject/CompleteCheck.c" "CMakeFiles/TodoList.dir/CompleteCheck.c.o" "gcc" "CMakeFiles/TodoList.dir/CompleteCheck.c.o.d"
-  "/Users/choijiwoong/Programming/CiProject/DeleteTodoList.c" "CMakeFiles/TodoList.dir/DeleteTodoList.c.o" "gcc" "CMakeFiles/TodoList.dir/DeleteTodoList.c.o.d"
-  "/Users/choijiwoong/Programming/CiProject/EditDate.c" "CMakeFiles/TodoList.dir/EditDate.c.o" "gcc" "CMakeFiles/TodoList.dir/EditDate.c.o.d"
-  "/Users/choijiwoong/Programming/CiProject/EditImportance.c" "CMakeFiles/TodoList.dir/EditImportance.c.o" "gcc" "CMakeFiles/TodoList.dir/EditImportance.c.o.d"
-  "/Users/choijiwoong/Programming/CiProject/EditTodoList.c" "CMakeFiles/TodoList.dir/EditTodoList.c.o" "gcc" "CMakeFiles/TodoList.dir/EditTodoList.c.o.d"
-  "/Users/choijiwoong/Programming/CiProject/InputTodoList.c" "CMakeFiles/TodoList.dir/InputTodoList.c.o" "gcc" "CMakeFiles/TodoList.dir/InputTodoList.c.o.d"
-  "/Users/choijiwoong/Programming/CiProject/main.c" "CMakeFiles/TodoList.dir/main.c.o" "gcc" "CMakeFiles/TodoList.dir/main.c.o.d"
+  "/Users/choijiwoong/Programming/CiProject/BasicInfoMac.c" "CMakeFiles/TodoList.dir/BasicInfoMac.c.o" "gcc" "CMakeFiles/TodoList.dir/BasicInfoMac.c.o.d"
+  "/Users/choijiwoong/Programming/CiProject/CompleteCheckMac.c" "CMakeFiles/TodoList.dir/CompleteCheckMac.c.o" "gcc" "CMakeFiles/TodoList.dir/CompleteCheckMac.c.o.d"
+  "/Users/choijiwoong/Programming/CiProject/DeleteTodoListMac.c" "CMakeFiles/TodoList.dir/DeleteTodoListMac.c.o" "gcc" "CMakeFiles/TodoList.dir/DeleteTodoListMac.c.o.d"
+  "/Users/choijiwoong/Programming/CiProject/EditDateMac.c" "CMakeFiles/TodoList.dir/EditDateMac.c.o" "gcc" "CMakeFiles/TodoList.dir/EditDateMac.c.o.d"
+  "/Users/choijiwoong/Programming/CiProject/EditImportanceMac.c" "CMakeFiles/TodoList.dir/EditImportanceMac.c.o" "gcc" "CMakeFiles/TodoList.dir/EditImportanceMac.c.o.d"
+  "/Users/choijiwoong/Programming/CiProject/EditTodoListMac.c" "CMakeFiles/TodoList.dir/EditTodoListMac.c.o" "gcc" "CMakeFiles/TodoList.dir/EditTodoListMac.c.o.d"
+  "/Users/choijiwoong/Programming/CiProject/InputTodoListMac.c" "CMakeFiles/TodoList.dir/InputTodoListMac.c.o" "gcc" "CMakeFiles/TodoList.dir/InputTodoListMac.c.o.d"
+  "/Users/choijiwoong/Programming/CiProject/mainMac.c" "CMakeFiles/TodoList.dir/mainMac.c.o" "gcc" "CMakeFiles/TodoList.dir/mainMac.c.o.d"
   )
 
 # Targets to which this target links.
