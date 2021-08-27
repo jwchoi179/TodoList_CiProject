@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "stdio.h": "c",
+    "usefulheap.h": "c",
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "edittodolist.h": "c",
+    "completecheck.h": "c",
+    "chrono": "c",
+    "deletetodolist.h": "c",
+    "basicinfo.h": "c"
+  }
+}
