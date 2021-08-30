@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "BasicInfo.h"
-#include "InputTodoList.h"
-#include "CompleteCheck.h"
-#include "EditTodoList.h"
+#include "BasicInfoMac.h"
+#include "InputTodoListMac.h"
+#include "CompleteCheckMac.h"
+#include "EditTodoListMac.h"
 #include "DeleteTodoListMac.h"
 
 enum
@@ -17,7 +17,7 @@ enum
     TERMINATE = 0
 };
 
-int ListNum = 0, CompNum = 0; // ï¿½Ï·ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½
+int ListNum = 0, CompNum = 0; // ¿Ï·áÃ³¸®ÇÑ Ç×¸ñµéÀ» ÀúÀåÇÏ´Â ¹è¿­ÀÇ ÀÎµ¦½º
 
 int main()
 {
@@ -28,14 +28,14 @@ int main()
 
     while (1)
     {
-        system("cls");
+        system("clear");
         if (ListNum != 0)
         {
             ShowMyList(ListNum);
         }
 
         ShowMenu();
-        printf("ï¿½ï¿½ï¿½ï¿½ : ");
+        printf("¼±ÅÃ : ");
         scanf("%d", &choice);
 
         switch (choice)
@@ -88,8 +88,8 @@ int main()
             return 0;
 
         default:
-            printf("ï¿½ß¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½.\n");
-            printf("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ê½Ã¿ï¿½\n");
+            printf("Àß¸ø ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
+            printf("´Ù½Ã ¼±ÅÃÇÏ½Ê½Ã¿À\n");
         }
     }
 }

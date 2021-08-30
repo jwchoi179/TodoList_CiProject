@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "BasicInfo.h"
-#include "DeleteTodoList.h"
+#include "BasicInfoMac.h"
+#include "DeleteTodoListMac.h"
 
-int DeleteTodoList(int ListNum) //intï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+int DeleteTodoList(int ListNum) //intÇüÀ¸·Î º¯°æ
 {
-    system("cls");
+    system("clear");
 
     if (ListNum == 0)
     {
-        printf("\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. \n");
+        printf("\n»èÁ¦ÇÒ ÀÏÁ¤ÀÌ ¾ø½À´Ï´Ù. \n");
         printf("\n");
         CheckConfimed();
-        return 1; // ï¿½ß°ï¿½
+        return 1; // Ãß°¡
     }
 
     ShowMyList(ListNum);
@@ -20,13 +20,13 @@ int DeleteTodoList(int ListNum) //intï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     int num;
     while (1)
     {
-        printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½ : ");
+        printf("»èÁ¦ÇÒ ÀÏÁ¤ÀÇ ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
         scanf("%d", &num);
 
         if (num < 1 || num > ListNum)
         {
-            printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. \n");
-            printf("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½. \n");
+            printf("ÀÏÁ¤À» Ã£Áö ¸øÇÏ¿´½À´Ï´Ù. \n");
+            printf("´Ù½Ã ¼±ÅÃÇÏ¼¼¿ä. \n");
         }
         else
         {
@@ -36,14 +36,14 @@ int DeleteTodoList(int ListNum) //intï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     num -= 1;
 
-    // ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½È®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    // »èÁ¦ Ã³¸® ÀçÈ®ÀÎ Áú¹®
 
-    printf("\nï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½.\n");
+    printf("\nÇØ´ç ÀÏÁ¤À» »èÁ¦Çß½À´Ï´Ù.\n");
     ShowTodoList(num);
 
     for (int i = num; i < ListNum - num; ++i)
     {
         myList[i] = myList[i + 1];
     }
-    return 0; //ï¿½ß°ï¿½
+    return 0; //Ãß°¡
 }

@@ -1,5 +1,5 @@
-#include "BasicInfo.h"
-#include "InputTodoList.h"
+#include "BasicInfoMac.h"
+#include "InputTodoListMac.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -7,9 +7,9 @@
 void Input_Title(int LastListIdx)
 {
 	char Title[100] = {'\0'};
-	printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+	printf("Á¦¸ñÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.\n");
 	getchar();
-	scanf("%[^\n]", Title); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼
+	scanf("%[^\n]", Title); // °ø¹éÆ÷ÇÔ, ¹®Àå ÀüÃ¼
 
 	strcpy(myList[LastListIdx].Title, Title);
 }
@@ -23,7 +23,7 @@ void Input_Date(int LastListIdx)
 	{
 
 		printf("\n");
-		printf("ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½? [y / n]\n");
+		printf("³¯Â¥¸¦ ÁöÁ¤ÇÏ½Ã°Ú½À´Ï±î? [y / n]\n");
 		getchar();
 		scanf("%c", &dateset);
 
@@ -32,7 +32,7 @@ void Input_Date(int LastListIdx)
 			while (1)
 			{
 				printf("\n");
-				printf("ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½. [ex) 3 29]\n");
+				printf("³¯Â¥¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. [ex) 3 29]\n");
 
 				getchar();
 
@@ -41,8 +41,8 @@ void Input_Date(int LastListIdx)
 				if (!month || !day)
 				{
 					printf("\n");
-					printf("ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.\n");
-					printf("ï¿½Ù½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+					printf("Àß¸øµÈ Çü½ÄÀÔ´Ï´Ù.\n");
+					printf("´Ù½ÃÀÔ·ÂÇØÁÖ¼¼¿ä.\n");
 					while (getchar() != '\n')
 						;
 				}
@@ -66,11 +66,11 @@ void Input_Date(int LastListIdx)
 		else
 		{
 			printf("\n");
-			printf("ï¿½ß¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½.\n");
-			printf("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+			printf("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.\n");
+			printf("´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä.\n");
 			while (getchar() != '\n')
 				;
-			printf("ï¿½Æ¹ï¿½Å°ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+			printf("¾Æ¹«Å°³ª ÀÔ·Â ÈÄ ¿£ÅÍ¸¦ ´­·¯ÁÖ¼¼¿ä.\n");
 			getchar();
 		}
 	}
@@ -83,7 +83,7 @@ void Set_Importance(int LastListIdx)
 	while (1)
 	{
 		printf("\n");
-		printf("ï¿½ß¿äµµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½? [y / n]\n");
+		printf("Áß¿äµµ¸¦ ¼³Á¤ÇÏ½Ã°Ú½À´Ï±î? [y / n]\n");
 
 		getchar();
 
@@ -93,7 +93,7 @@ void Set_Importance(int LastListIdx)
 			while (1)
 			{
 				printf("\n");
-				printf("ï¿½ß¿äµµï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï±ï¿½? [1 / 2 / 3]\n");
+				printf("Áß¿äµµ´Â ¾ó¸¶ÀÔ´Ï±î? [1 / 2 / 3]\n");
 				getchar();
 
 				scanf("%d", &importance);
@@ -101,8 +101,8 @@ void Set_Importance(int LastListIdx)
 				if (!importance)
 				{
 					printf("\n");
-					printf("ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.\n");
-					printf("ï¿½Ù½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+					printf("Àß¸øµÈ Çü½ÄÀÔ´Ï´Ù.\n");
+					printf("´Ù½ÃÀÔ·ÂÇØÁÖ¼¼¿ä.\n");
 					while (getchar() != '\n')
 						;
 				}
@@ -117,8 +117,8 @@ void Set_Importance(int LastListIdx)
 					else
 					{
 						printf("\n");
-						printf("ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.\n");
-						printf("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+						printf("À¯È¿ÇÏÁö ¾ÊÀº Çü½ÄÀÔ´Ï´Ù.\n");
+						printf("´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä.\n");
 					}
 				}
 			}
@@ -132,11 +132,11 @@ void Set_Importance(int LastListIdx)
 		else
 		{
 			printf("\n");
-			printf("ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.\n");
-			printf("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+			printf("À¯È¿ÇÏÁö ¾ÊÀº Çü½ÄÀÔ´Ï´Ù.\n");
+			printf("´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä.\n");
 			while (getchar() != '\n')
 				;
-			printf("ï¿½Æ¹ï¿½Å°ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+			printf("¾Æ¹«Å°³ª ÀÔ·Â ÈÄ ¿£ÅÍ¸¦ ´­·¯ÁÖ¼¼¿ä.\n");
 			getchar();
 		}
 	}
@@ -144,7 +144,7 @@ void Set_Importance(int LastListIdx)
 
 void INPUT_Function(int ListNum)
 {
-	system("cls");
+	system("clear");
 	Input_Title(ListNum);
 	Input_Date(ListNum);
 	Set_Importance(ListNum);
