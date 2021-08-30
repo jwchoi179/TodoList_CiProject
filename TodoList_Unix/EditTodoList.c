@@ -127,16 +127,19 @@ void EditTodoList(int LastListIdx)
             if (choice == TITLE)
             {
                 EditTitle(LastListIdx);
+                printf("\n");
                 CheckConfimed();
             }
             else if (choice == DATE)
             {
                 EditDate(LastListIdx);
+                printf("\n");
                 CheckConfimed();
             }
             else if (choice == IMPORTANCE)
             {
                 EditImportance(LastListIdx);
+                printf("\n");
                 CheckConfimed();
             }
             else if (choice == TERMINATE)

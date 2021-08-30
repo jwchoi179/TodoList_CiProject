@@ -11,6 +11,7 @@ void ChooseImportanceMenu(int selectIdx)
 
     if (myList[selectIdx].Importance.ImportanceChecker == 0)
     {
+        printf("\n");
         printf("현재 저장된 중요도가 없습니다.\n");
         printf("\n");
         printf("중요도를 새로 추가하시겠습니까? (y/n)\n");
@@ -59,8 +60,10 @@ void ChooseImportanceMenu(int selectIdx)
     {
         while (1)
         {
+            printf("\n");
             printf("현재 저장된 중요도가 있습니다.\n");
             printf("현재 저장된 중요도는 %d입니다\n", myList[selectIdx].Importance.importance);
+            printf("\n");
             printf("중요도를 수정하시겠습니까?\n");
             printf("선택 (y/n) : ");
 
@@ -72,7 +75,8 @@ void ChooseImportanceMenu(int selectIdx)
             {
                 int choice_menu;
 
-                printf("------Menu------\n");
+                printf("\n");
+                printf("------------Menu------------\n");
                 printf("1. 현재 저장된 중요도를 수정\n");
                 printf("2. 현재 저장된 중요도를 삭제\n");
                 printf("선택 (1 or 2) : ");
@@ -85,6 +89,7 @@ void ChooseImportanceMenu(int selectIdx)
                 {
                     importance = (int *)malloc(sizeof(int));
 
+                    printf("\n");
                     printf("현재 저장된 중요도를 수정합니다\n");
                     while (1)
                     {
@@ -96,7 +101,10 @@ void ChooseImportanceMenu(int selectIdx)
                             break;
                         }
                         else
+                        {
+                            printf("\n");
                             printf("유효하지 않은 형식입니다\n");
+                        }
                     }
 
                     free(importance);
@@ -104,18 +112,21 @@ void ChooseImportanceMenu(int selectIdx)
                 }
                 else if (choice_menu == 2)
                 {
+                    printf("\n");
                     printf("현재 저장된 중요도를 삭제합니다\n");
                     myList[selectIdx].Importance.ImportanceChecker = 0;
                     return;
                 }
                 else
                 {
+                    printf("\n");
                     printf("잘못된 선택입니다.\n");
                     printf("다시 선택하세요\n");
                 }
             }
             else if (choice == 'n')
             {
+                printf("\n");
                 printf("중요도를 수정하지 않았습니다\n");
                 return;
             }
