@@ -1,7 +1,5 @@
-#ifndef __INPUTTODOLIST_H__
-#define __INPUTTODOLIST_H__
-
-#include "InputTodoList.h"
+#ifndef __INPUTTODOLISTMAC_H__
+#define __INPUTTODOLISTMAC_H__
 
 void Input_Title(int);
 void Input_Date(int);

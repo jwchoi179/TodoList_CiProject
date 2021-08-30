@@ -1,39 +1,60 @@
-#define _CRT_SECURE_NO_WARNINGS
-
 #include "BasicInfo.h"
 #include "InputTodoList.h"
 #include <stdio.h>
 #include <string.h>
-#pragma warning(disable : 4996)
+#include <stdlib.h>
 
 void Input_Title(int LastListIdx)
 {
 	char Title[100] = {'\0'};
-	printf("Á¦¸ñÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.\n");
+	printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
 	getchar();
-	scanf("%[^\n]", Title); // °ø¹éÆ÷ÇÔ, ¹®Àå ÀüÃ¼
+	scanf("%[^\n]", Title); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼
+
 	strcpy(myList[LastListIdx].Title, Title);
 }
 
 void Input_Date(int LastListIdx)
 {
 	char dateset;
-	int month = 1;
-	int day = 1;
+	int check;
+	int month, day;
 	while (1)
 	{
-		printf("³¯Â¥¸¦ ÁöÁ¤ÇÏ½Ã°Ú½À´Ï±î? [y / n]\n");
+
+		printf("\n");
+		printf("ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½? [y / n]\n");
 		getchar();
 		scanf("%c", &dateset);
+
 		if (dateset == 'y')
 		{
-			printf("³¯Â¥¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. [ex) 3 29]\n");
+			while (1)
+			{
+				printf("\n");
+				printf("ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½. [ex) 3 29]\n");
 
-			getchar();
+				getchar();
 
-			scanf("%d %d", &month, &day);
+				scanf("%d %d", &month, &day);
+
+				if (!month || !day)
+				{
+					printf("\n");
+					printf("ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.\n");
+					printf("ï¿½Ù½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+					while (getchar() != '\n')
+						;
+				}
+				else
+				{
+					break;
+				}
+			}
+
 			myList[LastListIdx].Date.date.month = month;
 			myList[LastListIdx].Date.date.day = day;
+
 			myList[LastListIdx].Date.DateChecker = 1;
 			break;
 		}
@@ -43,42 +64,87 @@ void Input_Date(int LastListIdx)
 			break;
 		}
 		else
-			printf("À¯È¿ÇÏÁö ¾ÊÀº Çü½ÄÀÔ´Ï´Ù.\n");
+		{
+			printf("\n");
+			printf("ï¿½ß¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½.\n");
+			printf("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+			while (getchar() != '\n')
+				;
+			printf("ï¿½Æ¹ï¿½Å°ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+			getchar();
+		}
 	}
 }
 
 void Set_Importance(int LastListIdx)
 {
 	char importanceset;
-	int importance = 1;
+	int importance;
 	while (1)
 	{
-		printf("Áß¿äµµ¸¦ ¼³Á¤ÇÏ½Ã°Ú½À´Ï±î? [y / n]\n");
+		printf("\n");
+		printf("ï¿½ß¿äµµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½? [y / n]\n");
+
 		getchar();
+
 		scanf("%c", &importanceset);
 		if (importanceset == 'y')
 		{
-			printf("Áß¿äµµ´Â ¾ó¸¶ÀÔ´Ï±î? [1 / 2 / 3]\n");
+			while (1)
+			{
+				printf("\n");
+				printf("ï¿½ß¿äµµï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï±ï¿½? [1 / 2 / 3]\n");
+				getchar();
 
-			getchar();
+				scanf("%d", &importance);
 
-			scanf("%d", &importance);
-			myList[LastListIdx].Importance.importance = importance;
-			myList[LastListIdx].Importance.ImportanceChecker = 1;
-			break;
+				if (!importance)
+				{
+					printf("\n");
+					printf("ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.\n");
+					printf("ï¿½Ù½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+					while (getchar() != '\n')
+						;
+				}
+				else
+				{
+					if (importance == 1 || importance == 2 || importance == 3)
+					{
+						myList[LastListIdx].Importance.importance = importance;
+						myList[LastListIdx].Importance.ImportanceChecker = 1;
+						break;
+					}
+					else
+					{
+						printf("\n");
+						printf("ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.\n");
+						printf("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+					}
+				}
+			}
+			return;
 		}
 		else if (importanceset == 'n')
 		{
 			myList[LastListIdx].Importance.ImportanceChecker = 0;
-			break;
+			return;
 		}
 		else
-			printf("À¯È¿ÇÏÁö ¾ÊÀº Çü½ÄÀÔ´Ï´Ù.\n");
+		{
+			printf("\n");
+			printf("ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.\n");
+			printf("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+			while (getchar() != '\n')
+				;
+			printf("ï¿½Æ¹ï¿½Å°ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+			getchar();
+		}
 	}
 }
 
 void INPUT_Function(int ListNum)
 {
+	system("cls");
 	Input_Title(ListNum);
 	Input_Date(ListNum);
 	Set_Importance(ListNum);

@@ -1,5 +1,6 @@
 #include "BasicInfoMac.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 void DataInit()
 {
@@ -13,8 +14,8 @@ void DataInit()
 
 void ShowMenu()
 {
-    printf("\n");
-    printf("--------Menu--------\n");
+    // printf("\n");
+    printf("----------------Menu----------------\n");
     printf("1. 할 일 입력하기\n");
     printf("2. 할 일 완료 체크하기\n");
     printf("3. 할 일 수정하기\n");
@@ -45,6 +46,7 @@ void ShowTodoList(int idx)
 
 int ShowMyList(int ListNum)
 {
+    system("clear");
     int check;
 
     if (ListNum == 0)
@@ -63,8 +65,7 @@ int ShowMyList(int ListNum)
     return 0;
 }
 
-int Select_IDX_In_List(int LastListIdx)
-// 현재까지 저장된 배열에서 사용자가 원하는 인덱스 번호를 반환
+void Select_IDX_In_List(int LastListIdx)
 {
     int selectNum;
 
@@ -77,12 +78,11 @@ int Select_IDX_In_List(int LastListIdx)
 
     if (selectNum - 1 <= LastListIdx)
     {
-        return selectNum - 1;
+        myList->TemporaryIdx = selectNum - 1;
     }
     else
     {
         printf("해당 항목이 없습니다\n");
-        return 0;
     }
 }
 

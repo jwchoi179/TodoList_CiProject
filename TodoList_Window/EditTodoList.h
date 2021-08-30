@@ -1,7 +1,7 @@
-#ifndef __EDITTODOLIST_H__
-#define __EDITTODOLIST_H__
+#ifndef __EDITTODOLISTMAC_H__
+#define __EDITTODOLISTMAC_H__
 
-#include "EditTodoList.h"
+#include "EditTodoListMac.h"
 
 void ShowModifyMenu();
 void EditTitle(int LastListIdx);

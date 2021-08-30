@@ -1,6 +1,6 @@
 #ifndef __DELETETODOLISTMAC_H__
 #define __DELETETODOLISTMAC_H__
 
-void DeleteTodoList(int ListNum);
+int DeleteTodoList(int ListNum);
 
 #endif

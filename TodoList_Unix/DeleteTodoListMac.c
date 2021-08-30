@@ -1,13 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "BasicInfoMac.h"
 #include "DeleteTodoListMac.h"
 
-void DeleteTodoList(int ListNum)
+int DeleteTodoList(int ListNum) //int형으로 변경
 {
+    system("clear");
+
     if (ListNum == 0)
     {
         printf("\n삭제할 일정이 없습니다. \n");
-        return;
+        printf("\n");
+        CheckConfimed();
+        return 1; // 추가
     }
 
     ShowMyList(ListNum);
@@ -31,6 +36,8 @@ void DeleteTodoList(int ListNum)
 
     num -= 1;
 
+    // 삭제 처리 재확인 질문
+
     printf("\n해당 일정을 삭제했습니다.\n");
     ShowTodoList(num);
 
@@ -38,4 +45,5 @@ void DeleteTodoList(int ListNum)
     {
         myList[i] = myList[i + 1];
     }
+    return 0; //추가
 }

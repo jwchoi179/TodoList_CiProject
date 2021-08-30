@@ -1,5 +1,5 @@
-#ifndef __EDITDATE_H__
-#define __EDITDATE_H__
+#ifndef __EDITDATEMAC_H__
+#define __EDITDATEMAC_H__
 
 void MakeNewDate(int selectIdx);
 void ModifyDate(int selectIdx);

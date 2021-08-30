@@ -26,6 +26,7 @@ typedef struct _todolist
     Date Date; // 할 일의 날짜
     Importance Importance;
     // 중요도는 1, 2, 3으로 우선순위를 부여합니다
+    int TemporaryIdx; // 구조체 변수 추가
     char Title[SIZE]; // 할 일의 제목
 } List;
 
@@ -36,7 +37,7 @@ void DataInit();
 void ShowMenu();
 void ShowTodoList(int idx);
 int ShowMyList(int ListNum);
-int Select_IDX_In_List(int LastListIdx);
+void Select_IDX_In_List(int LastListIdx);
 void ShowRestWork(int ListNum);
 void CheckConfimed();
 

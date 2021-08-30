@@ -22,11 +22,18 @@ int ListNum = 0, CompNum = 0; // 완료처리한 항목들을 저장하는 배�
 int main()
 {
     int choice;
+    int comchecker, deletechecker;
 
     DataInit();
 
     while (1)
     {
+        system("clear");
+        if (ListNum != 0)
+        {
+            ShowMyList(ListNum);
+        }
+
         ShowMenu();
         printf("선택 : ");
         scanf("%d", &choice);
@@ -39,9 +46,16 @@ int main()
             break;
 
         case (COMPLETEDCHECK):
-            CompleteCheck(ListNum, CompNum);
-            --ListNum;
-            ++CompNum;
+            comchecker = CompleteCheck(ListNum, CompNum);
+            if (comchecker == 1)
+            {
+                continue;
+            }
+            else
+            {
+                --ListNum;
+                ++CompNum;
+            }
             break;
 
         case (MODIFY):
@@ -49,8 +63,15 @@ int main()
             break;
 
         case (DELETE):
-            DeleteTodoList(ListNum);
-            --ListNum;
+            deletechecker = DeleteTodoList(ListNum);
+            if (deletechecker == 1)
+            {
+                continue;
+            }
+            else
+            {
+                --ListNum;
+            }
             break;
 
         case (SHOWLIST):

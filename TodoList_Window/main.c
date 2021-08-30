@@ -1,13 +1,10 @@
-#define _CRT_SECURE_NO_WARNINGS
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "BasicInfo.h"
 #include "InputTodoList.h"
 #include "CompleteCheck.h"
 #include "EditTodoList.h"
-#include "DeleteTodoList.h"
-#pragma warning(disable : 4996)
+#include "DeleteTodoListMac.h"
 
 enum
 {
@@ -20,18 +17,25 @@ enum
     TERMINATE = 0
 };
 
-int ListNum = 0, CompNum = 0; // ¿Ï·áÃ³¸®ÇÑ Ç×¸ñµéÀ» ÀúÀåÇÏ´Â ¹è¿­ÀÇ ÀÎµ¦½º
+int ListNum = 0, CompNum = 0; // ï¿½Ï·ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½
 
 int main()
 {
     int choice;
+    int comchecker, deletechecker;
 
     DataInit();
 
     while (1)
     {
+        system("cls");
+        if (ListNum != 0)
+        {
+            ShowMyList(ListNum);
+        }
+
         ShowMenu();
-        printf("¼±ÅÃ : ");
+        printf("ï¿½ï¿½ï¿½ï¿½ : ");
         scanf("%d", &choice);
 
         switch (choice)
@@ -42,9 +46,16 @@ int main()
             break;
 
         case (COMPLETEDCHECK):
-            CompleteCheck(ListNum, CompNum);
-            --ListNum;
-            ++CompNum;
+            comchecker = CompleteCheck(ListNum, CompNum);
+            if (comchecker == 1)
+            {
+                continue;
+            }
+            else
+            {
+                --ListNum;
+                ++CompNum;
+            }
             break;
 
         case (MODIFY):
@@ -52,8 +63,15 @@ int main()
             break;
 
         case (DELETE):
-            DeleteTodoList(ListNum);
-            --ListNum;
+            deletechecker = DeleteTodoList(ListNum);
+            if (deletechecker == 1)
+            {
+                continue;
+            }
+            else
+            {
+                --ListNum;
+            }
             break;
 
         case (SHOWLIST):
@@ -70,8 +88,8 @@ int main()
             return 0;
 
         default:
-            printf("Àß¸ø ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
-            printf("´Ù½Ã ¼±ÅÃÇÏ½Ê½Ã¿À\n");
+            printf("ï¿½ß¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½.\n");
+            printf("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ê½Ã¿ï¿½\n");
         }
     }
 }

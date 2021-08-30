@@ -1,18 +1,8 @@
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "CompleteCheckMac.h"
 #include "BasicInfoMac.h"
-
-void CompleteCheck(int ListNum, int CompNum)
-{
-    if (ListNum == 0)
-    {
-        printf("완료처리할 일정이 없습니다.\n");
-        return;
-    }
-
-    CompleteLoop(ListNum, CompNum);
-}
 
 // 의도 : 할 일을 완료처리하는 함수
 void CompleteLoop(int ListNum, int CompNum)
@@ -41,6 +31,8 @@ void CompleteLoop(int ListNum, int CompNum)
         }
     }
 
+    // 완료처리 재확인 질문
+
     choice -= 1;
 
     myCompList[CompNum] = myList[choice]; // 완료 처리된 항목들을 저장하는 연산
@@ -50,6 +42,22 @@ void CompleteLoop(int ListNum, int CompNum)
     {
         myList[i] = myList[i + 1];
     }
+}
+
+int CompleteCheck(int ListNum, int CompNum) //int 형으로 변경
+{
+    system("clear");
+    if (ListNum == 0)
+    {
+        printf("완료처리할 일정이 없습니다.\n");
+        printf("\n");
+        CheckConfimed();
+
+        return 1; //추가
+    }
+
+    CompleteLoop(ListNum, CompNum);
+    return 0; //추가
 }
 
 void ShowCompList(int idx)
@@ -70,6 +78,14 @@ void ShowCompList(int idx)
 
 void ShowMyCompList(int CompNum)
 {
+    system("clear");
+
+    if (CompNum == 0)
+    {
+        printf("완료처리한 일정이 없습니다.\n");
+        printf("\n");
+    }
+
     for (int i = 0; i < CompNum; ++i)
     {
         ShowCompList(i);

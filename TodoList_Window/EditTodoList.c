@@ -1,5 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
-
 #include "BasicInfo.h"
 #include "EditDate.h"
 #include "EditImportance.h"
@@ -9,27 +7,61 @@
 
 void ShowModifyMenu()
 {
-    printf("\n");
-    printf("--------Menu--------\n");
-    printf("1. Á¦¸ñ ¼öÁ¤\n");
-    printf("2. ³¯Â¥ ¼öÁ¤\n");
-    printf("3. Áß¿äµµ ¼öÁ¤\n");
-    printf("0. ¼öÁ¤¸Þ´º Á¾·á\n");
+    // printf("\n");
+    printf("-------------------Menu-------------------\n");
+    printf("1. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½\n");
+    printf("2. ï¿½ï¿½Â¥ ï¿½ï¿½ï¿½ï¿½\n");
+    printf("3. ï¿½ß¿äµµ ï¿½ï¿½ï¿½ï¿½\n");
+    printf("0. ï¿½ï¿½ï¿½ï¿½ï¿½Þ´ï¿½ ï¿½ï¿½ï¿½ï¿½\n");
     printf("\n");
 
     return;
 }
 
+int ShowChooseMenu(int ListNum)
+{
+    int choice;
+
+    while (1)
+    {
+        system("cls");
+        printf("1. ï¿½×¸ï¿½ ï¿½ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½\n");
+        printf("2. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½\n");
+        printf("ï¿½ï¿½ï¿½ï¿½ : ");
+
+        getchar();
+
+        scanf("%d", &choice);
+
+        if (choice == 1)
+        {
+            Select_IDX_In_List(ListNum);
+            return 0;
+        }
+        else if (choice == 2)
+        {
+            return 1;
+        }
+        else
+        {
+            printf("\n");
+            printf("ï¿½ß¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½\n");
+            CheckConfimed();
+        }
+    }
+}
+
 void EditTitle(int LastListIdx)
 {
     int selectIdx;
-    selectIdx = Select_IDX_In_List(LastListIdx);
+    selectIdx = myList->TemporaryIdx;
+    // (8 29 ï¿½ß°ï¿½) strcpyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È£ï¿½ï¿½ Select ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ù¾ï¿½ -> Select ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ù¾ï¿½
 
-    char* input_title = (char*)malloc(SIZE * sizeof(char));
+    char *input_title = (char *)malloc(SIZE * sizeof(char));
 
     printf("\n");
-    printf("¼öÁ¤ÇÏ°í ½ÍÀº Á¦¸ñÀ» ÀÔ·ÂÇÏ¼¼¿ä\n");
-    printf("ÀÔ·Â : ");
+    printf("ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½\n");
+    printf("ï¿½Ô·ï¿½ : ");
     getchar();
     scanf("%[^\n]", input_title);
 
@@ -42,6 +74,8 @@ void EditTodoList(int LastListIdx)
 {
     int choice;
     int answer;
+    int result;
+    int temp;
 
     enum
     {
@@ -52,57 +86,80 @@ void EditTodoList(int LastListIdx)
         TERMINATE = 0
     };
 
-    printf("\n-------ÇöÀç ÀúÀåµÇ¾î ÀÖ´Â Ç×¸ñÀÔ´Ï´Ù--------\n");
-    ShowMyList(LastListIdx);
+    system("cls");
 
+    if (LastListIdx != 0)
+    {
+        printf("\n-------ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½Ö´ï¿½ ï¿½×¸ï¿½ï¿½Ô´Ï´ï¿½--------\n");
+    }
+
+    // (8 29 ï¿½ß°ï¿½) showmyList ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½(2ï¿½ï¿½ ï¿½ß¿ï¿½ 1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
     while (1)
     {
         if (LastListIdx == 0)
         {
-            printf("ÀúÀåµÇ¾î ÀÖ´Â ÇÒ ÀÏÀÌ ¾ø½À´Ï´Ù\n");
+            printf("ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½\n");
+            printf("\n");
             CheckConfimed();
             return;
         }
+        // (8 29 ï¿½ß°ï¿½) Select ï¿½Ô¼ï¿½ ï¿½ß°ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Edit~ ï¿½Ô¼ï¿½ ï¿½È¿ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½)
+        result = ShowChooseMenu(LastListIdx);
 
-        ShowModifyMenu();
-
-        printf("¼±ÅÃ : ");
-        getchar();
-        scanf("%d", &choice);
-
-        switch (choice)
+        if (result == 1)
         {
-        case TITLE:
-            EditTitle(LastListIdx);
-            break;
+            return;
+        }
 
-        case DATE:
-            EditDate(LastListIdx);
-            break;
+        system("cls");
 
-        case IMPORTANCE:
-            EditImportance(LastListIdx);
-            break;
+        while (1)
+        {
+            system("cls");
 
-        case TERMINATE:
-            printf("¼öÁ¤À» ¿Ï·áÇÏ½Ã°Ú½À´Ï´Ù?\n");
-            printf("È®ÀÎ : 1, Ãë¼Ò : 0\n");
-            scanf("%d", &answer);
+            ShowTodoList(myList->TemporaryIdx);
 
-            if (answer == 1)
+            ShowModifyMenu();
+
+            printf("ï¿½ï¿½ï¿½ï¿½ : ");
+            getchar();
+            scanf("%d", &choice);
+
+            if (choice == TITLE)
             {
-                return;
+                EditTitle(LastListIdx);
+            }
+            else if (choice == DATE)
+            {
+                EditDate(LastListIdx);
+            }
+            else if (choice == IMPORTANCE)
+            {
+                EditImportance(LastListIdx);
+            }
+            else if (choice == TERMINATE)
+            {
+                printf("\n");
+                printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï´ï¿½?\n");
+                printf("È®ï¿½ï¿½ : 1, ï¿½ï¿½ï¿½ : 0\n");
+                scanf("%d", &answer);
+
+                if (answer == 1)
+                {
+                    break;
+                }
+                else
+                    continue;
             }
             else
             {
-                continue;
+                printf("ï¿½ß¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½\n");
+                printf("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ê½Ã¿ï¿½\n");
             }
-
-        default:
-            printf("Àß¸ø ¼±ÅÃÇÏ¼Ì½À´Ï´Ù\n");
-            printf("´Ù½Ã ¼±ÅÃÇÏ½Ê½Ã¿À\n");
         }
-        printf("\n-------¼öÁ¤ Ã³¸®µÈ ÇÒ ÀÏ ³»¿ª ÀÔ´Ï´Ù-------\n");
-        ShowMyList(LastListIdx);
+
+        printf("\n-------ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô´Ï´ï¿½-------\n");
+        ShowTodoList(myList->TemporaryIdx);
+        CheckConfimed();
     }
 }

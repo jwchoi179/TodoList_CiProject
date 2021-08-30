@@ -1,5 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
-
 #include "BasicInfo.h"
 #include "EditDate.h"
 #include <stdio.h>
@@ -10,25 +8,35 @@ void MakeNewDate(int selectIdx)
 {
     int month;
     int day;
+    while (1)
+    {
+        printf("\n");
+        printf("ï¿½ß°ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½. [ex) 3 29]\n");
 
-    printf("Ãß°¡ÇÏ°íÀÚ ÇÏ´Â ³¯Â¥ÀÇ ´Þ(Month)¸¦ ÀÔ·Â : ");
+        getchar();
 
-    getchar();
+        scanf("%d %d", &month, &day);
 
-    scanf("%d", &month);
-
-    printf("Ãß°¡ÇÏ°íÀÚ ÇÏ´Â ³¯Â¥ÀÇ ÀÏ(Day)¸¦ ÀÔ·Â : ");
-
-    getchar();
-
-    scanf("%d", &day);
+        if (!month || !day)
+        {
+            printf("\n");
+            printf("ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.\n");
+            printf("ï¿½Ù½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+            while (getchar() != '\n')
+                ;
+        }
+        else
+        {
+            break;
+        }
+    }
 
     myList[selectIdx].Date.date.month = month;
     myList[selectIdx].Date.date.day = day;
 
     myList[selectIdx].Date.DateChecker = 1;
 
-    printf("Ãß°¡ÇÑ ³¯Â¥´Â %d¿ù %dÀÏ ÀÔ´Ï´Ù\n",
+    printf("ï¿½ß°ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ %dï¿½ï¿½ %dï¿½ï¿½ ï¿½Ô´Ï´ï¿½\n",
            myList[selectIdx].Date.date.month, myList[selectIdx].Date.date.day);
 }
 
@@ -38,13 +46,15 @@ void ModifyDate(int selectIdx)
     int month;
     int day;
 
-    printf("ÇöÀç ÀúÀåµÈ ³¯Â¥°¡ ÀÖ½À´Ï´Ù.");
-    printf("ÇöÀç ÀúÀåµÈ ³¯Â¥´Â %d¿ù %dÀÏ ÀÔ´Ï´Ù\n",
+    printf("\n");
+    printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.\n");
+    printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ %dï¿½ï¿½ %dï¿½ï¿½ ï¿½Ô´Ï´ï¿½\n",
            myList[selectIdx].Date.date.month, myList[selectIdx].Date.date.day);
 
-    printf("1. ÇöÀç ÀúÀåµÈ ³¯Â¥¸¦ ¼öÁ¤\n");
-    printf("2. ÇöÀç ÀúÀåµÈ ³¯Â¥¸¦ »èÁ¦\n");
-    printf("¼±ÅÃ (1 or 2) : ");
+    printf("\n");
+    printf("1. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½\n");
+    printf("2. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½\n");
+    printf("ï¿½ï¿½ï¿½ï¿½ (1 or 2) : ");
 
     getchar();
 
@@ -52,26 +62,37 @@ void ModifyDate(int selectIdx)
 
     if (choice == 1)
     {
-        printf("ÇöÀç ÀúÀåµÈ ³¯Â¥¸¦ ¼öÁ¤ÇÕ´Ï´Ù\n");
-        printf("¼öÁ¤ÇÏ°í ½ÍÀº ³¯Â¥ ÀÔ·Â\n");
-        printf("¿ù(Month) : ");
+        while (1)
+        {
+            printf("\n");
+            printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½\n");
+            printf("ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½. [ex) 03 30]\n");
 
-        getchar();
+            getchar();
 
-        scanf("%d", &month);
+            scanf("%d %d", &month, &day);
 
-        printf("ÀÏ(Day) : ");
-
-        getchar();
-
-        scanf("%d", &day);
+            if (!month || !day)
+            {
+                printf("\n");
+                printf("ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.\n");
+                printf("ï¿½Ù½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+                while (getchar() != '\n')
+                    ;
+            }
+            else
+            {
+                break;
+            }
+        }
 
         myList[selectIdx].Date.date.month = month;
         myList[selectIdx].Date.date.day = day;
     }
     else if (choice == 2)
     {
-        printf("ÇöÀç ÀúÀåµÈ ³¯Â¥¸¦ »èÁ¦ÇÕ´Ï´Ù\n");
+        printf("\n");
+        printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½\n");
         myList[selectIdx].Date.DateChecker = 0;
     }
 }
@@ -79,17 +100,18 @@ void ModifyDate(int selectIdx)
 void EditDate(int LastListIdx)
 {
     int selectIdx;
-    selectIdx = Select_IDX_In_List(LastListIdx);
+    selectIdx = myList->TemporaryIdx;
 
-    if (myList[selectIdx].Date.DateChecker == 0) // »ý¼ºµÈ ³¯Â¥°¡ ¾ø´Â °æ¿ì
+    if (myList[selectIdx].Date.DateChecker == 0) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
     {
         char make_choice;
 
         while (1)
         {
-            printf("ÇöÀç ÀúÀåµÈ ³¯Â¥°¡ ¾ø½À´Ï´Ù\n");
-            printf("³¯Â¥¸¦ »õ·Î ¸¸µå½Ã°Ú½À´Ï±î? (y/n)\n");
-            printf("¼±ÅÃ : ");
+            printf("\n");
+            printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½\n");
+            printf("ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã°Ú½ï¿½ï¿½Ï±ï¿½? (y/n)\n");
+            printf("ï¿½ï¿½ï¿½ï¿½ : ");
 
             getchar();
 
@@ -102,25 +124,30 @@ void EditDate(int LastListIdx)
             }
             else if (make_choice == 'n')
             {
-                printf("³¯Â¥¸¦ ¼öÁ¤ÇÏÁö ¾Ê¾Ò½À´Ï´Ù\n");
-                printf("¼öÁ¤ ¼±ÅÃ È­¸éÀ¸·Î µ¹¾Æ°©´Ï´Ù\n");
+                printf("ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò½ï¿½ï¿½Ï´ï¿½\n");
+                printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ°ï¿½ï¿½Ï´ï¿½\n");
                 return;
             }
             else
             {
-                printf("Àß¸øÀÔ·ÂÇÏ¼Ì½À´Ï´Ù\n");
-                printf("´Ù½Ã ¼±ÅÃÇÕ´Ï´Ù\n");
+                printf("ï¿½ß¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½\n");
+                printf("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½\n");
+                while (getchar() != '\n')
+                    ;
+                printf("ï¿½Æ¹ï¿½Å°ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
+                getchar();
             }
         }
     }
-    else if (myList[selectIdx].Date.DateChecker == 1) // ³¯Â¥°¡ Á¸ÀçÇÏ´Â °æ¿ì
+    else if (myList[selectIdx].Date.DateChecker == 1) // ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½
     {
         char modify_choice;
         while (1)
         {
-            printf("ÇöÀç ÀúÀåµÈ ³¯Â¥°¡ ÀÖ½À´Ï´Ù\n");
-            printf("³¯Â¥¸¦ ¼öÁ¤ÇÏ½Ã°Ú½À´Ï±î? (y/n)\n");
-            printf("¼±ÅÃ : ");
+            printf("\n");
+            printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½\n");
+            printf("ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½? (y/n)\n");
+            printf("ï¿½ï¿½ï¿½ï¿½ : ");
 
             getchar();
 
@@ -133,14 +160,14 @@ void EditDate(int LastListIdx)
             }
             else if (modify_choice == 'n')
             {
-                printf("³¯Â¥¸¦ ¼öÁ¤ÇÏÁö ¾Ê¾Ò½À´Ï´Ù\n");
-                printf("¼öÁ¤ ¼±ÅÃ È­¸éÀ¸·Î µ¹¾Æ°©´Ï´Ù");
+                printf("ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò½ï¿½ï¿½Ï´ï¿½\n");
+                printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ°ï¿½ï¿½Ï´ï¿½");
                 return;
             }
             else
             {
-                printf("Àß¸øÀÔ·ÂÇÏ¼Ì½À´Ï´Ù\n");
-                printf("´Ù½Ã ¼±ÅÃÇÕ´Ï´Ù\n");
+                printf("ï¿½ß¸ï¿½ï¿½Ô·ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½\n");
+                printf("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½\n");
             }
         }
     }

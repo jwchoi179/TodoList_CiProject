@@ -1,7 +1,6 @@
-#define _CRT_SECURE_NO_WARNINGS
-
 #include "BasicInfo.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 void DataInit()
 {
@@ -15,15 +14,15 @@ void DataInit()
 
 void ShowMenu()
 {
-    printf("\n");
-    printf("--------Menu--------\n");
-    printf("1. ÇÒ ÀÏ ÀÔ·ÂÇÏ±â\n");
-    printf("2. ÇÒ ÀÏ ¿Ï·á Ã¼Å©ÇÏ±â\n");
-    printf("3. ÇÒ ÀÏ ¼öÁ¤ÇÏ±â\n");
-    printf("4. ÇÒ ÀÏ »èÁ¦ÇÏ±â\n");
-    printf("5. ÇöÀç ³²Àº ÇÒ ÀÏ Ãâ·Â\n");
-    printf("6. ¿Ï·áµÈ ÀÏÁ¤ Ãâ·Â\n");
-    printf("0. ÇÁ·Î±×·¥ Á¾·á\n");
+    // printf("\n");
+    printf("----------------Menu----------------\n");
+    printf("1. ï¿½ï¿½ ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï±ï¿½\n");
+    printf("2. ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï·ï¿½ Ã¼Å©ï¿½Ï±ï¿½\n");
+    printf("3. ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½\n");
+    printf("4. ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½\n");
+    printf("5. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½\n");
+    printf("6. ï¿½Ï·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½\n");
+    printf("0. ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ï¿½\n");
     printf("\n");
 
     return;
@@ -33,25 +32,26 @@ void ShowTodoList(int idx)
 {
     printf("\n");
 
-    printf("Ç×¸ñ ¹øÈ£ : %d\n", idx + 1);
-    printf("ÇÒ ÀÏ ÀÌ¸§ : %s\n", myList[idx].Title);
+    printf("ï¿½×¸ï¿½ ï¿½ï¿½È£ : %d\n", idx + 1);
+    printf("ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¸ï¿½ : %s\n", myList[idx].Title);
 
     if (myList[idx].Date.DateChecker == 1)
-        printf("³¯Â¥ : %d¿ù %dÀÏ\n", myList[idx].Date.date.month, myList[idx].Date.date.day);
+        printf("ï¿½ï¿½Â¥ : %dï¿½ï¿½ %dï¿½ï¿½\n", myList[idx].Date.date.month, myList[idx].Date.date.day);
 
     if (myList[idx].Importance.ImportanceChecker == 1)
-        printf("Áß¿äµµ : %d\n", myList[idx].Importance.importance);
+        printf("ï¿½ß¿äµµ : %d\n", myList[idx].Importance.importance);
 
     printf("\n");
 }
 
 int ShowMyList(int ListNum)
 {
+    system("cls");
     int check;
 
     if (ListNum == 0)
     {
-        printf("ÇöÀç ³²Àº ÇÒ ÀÏÀÌ ¾ø½À´Ï´Ù\n");
+        printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½\n");
         printf("\n");
 
         return -1;
@@ -65,13 +65,12 @@ int ShowMyList(int ListNum)
     return 0;
 }
 
-int Select_IDX_In_List(int LastListIdx)
-// ÇöÀç±îÁö ÀúÀåµÈ ¹è¿­¿¡¼­ »ç¿ëÀÚ°¡ ¿øÇÏ´Â ÀÎµ¦½º ¹øÈ£¸¦ ¹ÝÈ¯
+void Select_IDX_In_List(int LastListIdx)
 {
     int selectNum;
 
     ShowMyList(LastListIdx);
-    printf("¼öÁ¤ or »èÁ¦ or ¿Ï·áÃ³¸®¸¦ ÇÏ°í ½ÍÀº Ç×¸ñÀÇ ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+    printf("ï¿½ï¿½ï¿½ï¿½ or ï¿½ï¿½ï¿½ï¿½ or ï¿½Ï·ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½ : ");
 
     getchar();
 
@@ -79,12 +78,11 @@ int Select_IDX_In_List(int LastListIdx)
 
     if (selectNum - 1 <= LastListIdx)
     {
-        return selectNum - 1;
+        myList->TemporaryIdx = selectNum - 1;
     }
     else
     {
-        printf("ÇØ´ç Ç×¸ñÀÌ ¾ø½À´Ï´Ù\n");
-        return 0;
+        printf("ï¿½Ø´ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½\n");
     }
 }
 
@@ -96,7 +94,7 @@ void ShowRestWork(int ListNum)
     }
     else
     {
-        printf("³²Àº ÇÒ ÀÏÀÔ´Ï´Ù\n");
+        printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½\n");
         printf("\n");
         ShowMyList(ListNum);
     }
@@ -107,7 +105,7 @@ void CheckConfimed()
     int check;
     while (1)
     {
-        printf("È®ÀÎÇÏ¼ÌÀ¸¸é 1À» ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+        printf("È®ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ : ");
 
         getchar();
 
@@ -117,7 +115,7 @@ void CheckConfimed()
             return;
         else
         {
-            printf("´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä\n");
+            printf("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½\n");
             printf("\n");
             continue;
         }
