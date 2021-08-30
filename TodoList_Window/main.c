@@ -5,7 +5,7 @@
 #include "CompleteCheck.h"
 #include "EditTodoList.h"
 #include "DeleteTodoList.h"
-#pragma warning(disable: 4996)
+#pragma warning(disable : 4996)
 
 enum
 {
@@ -30,6 +30,7 @@ int main()
     while (1)
     {
         system("cls");
+
         if (ListNum != 0)
         {
             ShowMyList(ListNum);
