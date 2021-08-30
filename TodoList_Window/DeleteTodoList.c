@@ -5,7 +5,7 @@
 
 int DeleteTodoList(int ListNum) //int������ ����
 {
-    system("clear");
+    system("cls");
 
     if (ListNum == 0)
     {

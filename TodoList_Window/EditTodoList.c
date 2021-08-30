@@ -24,7 +24,7 @@ int ShowChooseMenu(int ListNum)
 
     while (1)
     {
-        system("clear");
+        system("cls");
         printf("1. �׸� ��ȣ �����ϱ�\n");
         printf("2. ���� ��� ����\n");
         printf("���� : ");
@@ -86,7 +86,7 @@ void EditTodoList(int LastListIdx)
         TERMINATE = 0
     };
 
-    system("clear");
+    system("cls");
 
     if (LastListIdx != 0)
     {
@@ -111,11 +111,11 @@ void EditTodoList(int LastListIdx)
             return;
         }
 
-        system("clear");
+        system("cls");
 
         while (1)
         {
-            system("clear");
+            system("cls");
 
             ShowTodoList(myList->TemporaryIdx);
 

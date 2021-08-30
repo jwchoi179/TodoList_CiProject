@@ -46,7 +46,7 @@ void CompleteLoop(int ListNum, int CompNum)
 
 int CompleteCheck(int ListNum, int CompNum) //int ������ ����
 {
-    system("clear");
+    system("cls");
     if (ListNum == 0)
     {
         printf("�Ϸ�ó���� ������ �����ϴ�.\n");
@@ -78,7 +78,7 @@ void ShowCompList(int idx)
 
 void ShowMyCompList(int CompNum)
 {
-    system("clear");
+    system("cls");
 
     if (CompNum == 0)
     {

@@ -1,17 +1,17 @@
-#ifndef __BASICINFOMAC_H__
-#define __BASICINFOMAC_H__
+#ifndef __BASICINFO_H__
+#define __BASICINFO_H__
 
 #define SIZE 100
 
 typedef struct _detailDate
 {
-    int month; // ³¯Â¥ÀÇ ¿ù(Month)
-    int day;   // ³¯Â¥ÀÇ ÀÏ(Day)
+    int month; // ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½(Month)
+    int day;   // ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½(Day)
 } DetailDate;
 
 typedef struct _date
 {
-    DetailDate date; // ½ÃÀÛ ³¯Â¥ ¹× ÇØ¾ßÇÏ´Â ³¯Â¥
+    DetailDate date; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ ï¿½ï¿½ ï¿½Ø¾ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½Â¥
     int DateChecker;
 } Date;
 
@@ -23,15 +23,15 @@ typedef struct _importance
 
 typedef struct _todolist
 {
-    Date Date; // ÇÒ ÀÏÀÇ ³¯Â¥
+    Date Date; // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥
     Importance Importance;
-    // Áß¿äµµ´Â 1, 2, 3À¸·Î ¿ì¼±¼øÀ§¸¦ ºÎ¿©ÇÕ´Ï´Ù
-    int TemporaryIdx; // ±¸Á¶Ã¼ º¯¼ö Ãß°¡
-    char Title[SIZE]; // ÇÒ ÀÏÀÇ Á¦¸ñ
+    // ï¿½ß¿äµµï¿½ï¿½ 1, 2, 3ï¿½ï¿½ï¿½ï¿½ ï¿½ì¼±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ï¿½Õ´Ï´ï¿½
+    int TemporaryIdx; // ï¿½ï¿½ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
+    char Title[SIZE]; // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 } List;
 
-List myCompList[SIZE]; // ¿Ï·áÃ³¸®¸¦ ÇÑ Ç×¸ñµéÀ» ÀúÀåÇÑ ¹è¿­
-List myList[SIZE];     // ÇÒ ÀÏµéÀ» ÀúÀåÇÒ ¹è¿­
+List myCompList[SIZE]; // ï¿½Ï·ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
+List myList[SIZE];     // ï¿½ï¿½ ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
 
 void DataInit();
 void ShowMenu();

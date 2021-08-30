@@ -4,7 +4,7 @@
 #include "InputTodoList.h"
 #include "CompleteCheck.h"
 #include "EditTodoList.h"
-#include "DeleteTodoListMac.h"
+#include "DeleteTodoList.h"
 
 enum
 {

@@ -144,7 +144,7 @@ void Set_Importance(int LastListIdx)
 
 void INPUT_Function(int ListNum)
 {
-	system("clear");
+	system("cls");
 	Input_Title(ListNum);
 	Input_Date(ListNum);
 	Set_Importance(ListNum);
