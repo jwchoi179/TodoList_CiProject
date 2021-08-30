@@ -1,9 +1,8 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "CompleteCheck.h"
 #include "BasicInfo.h"
-#include "EditTodoList.h"
+#include "CompleteCheck.h"
 
 #pragma warning(disable : 4996)
 

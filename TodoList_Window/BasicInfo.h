@@ -40,5 +40,6 @@ int ShowMyList(int ListNum);
 void Select_IDX_In_List(int LastListIdx);
 void ShowRestWork(int ListNum);
 void CheckConfimed();
+int ShowChooseMenu(int ListNum)
 
 #endif

@@ -4,7 +4,6 @@
 #include "EditTodoList.h"
 
 void ShowModifyMenu();
-int ShowChooseMenu(int ListNum);
 void EditTitle();
 void MakeNewDate(int selectIdx);
 void ModifyDate(int selectIdx);

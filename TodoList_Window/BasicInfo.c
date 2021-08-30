@@ -129,3 +129,35 @@ void CheckConfimed()
         }
     }
 }
+
+int ShowChooseMenu(int ListNum)
+{
+    int choice;
+
+    while (1)
+    {
+        system("cls");
+        printf("1. 항목 번호 선택하기\n");
+        printf("2. 현재 메뉴얼 종료\n");
+        printf("선택 : ");
+
+        getchar();
+
+        scanf("%d", &choice);
+
+        if (choice == 1)
+        {
+            return 0;
+        }
+        else if (choice == 2)
+        {
+            return 1;
+        }
+        else
+        {
+            printf("\n");
+            printf("잘못 선택하셨습니다\n");
+            CheckConfimed();
+        }
+    }
+}
