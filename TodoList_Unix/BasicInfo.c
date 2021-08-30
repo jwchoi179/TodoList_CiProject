@@ -46,7 +46,7 @@ void ShowTodoList(int idx)
 
 int ShowMyList(int ListNum)
 {
-    system("cls");
+    system("clear");
     int check;
 
     if (ListNum == 0)

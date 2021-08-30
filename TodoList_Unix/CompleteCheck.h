@@ -1,5 +1,5 @@
-#ifndef __COMPLETECHECKMAC_H__
-#define __COMPLETECHECKMAC_H__
+#ifndef __COMPLETECHECK_H__
+#define __COMPLETECHECK_H__
 
 #pragma once
 int CompleteCheck(int ListNum, int CompNum);

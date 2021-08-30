@@ -1,5 +1,5 @@
-#include "BasicInfoMac.h"
-#include "EditImportanceMac.h"
+#include "BasicInfo.h"
+#include "EditImportance.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

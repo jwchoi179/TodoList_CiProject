@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "BasicInfoMac.h"
-#include "DeleteTodoListMac.h"
+#include "BasicInfo.h"
+#include "DeleteTodoList.h"
 
 int DeleteTodoList(int ListNum) //int형으로 변경
 {

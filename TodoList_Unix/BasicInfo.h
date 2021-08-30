@@ -1,5 +1,5 @@
-#ifndef __BASICINFOMAC_H__
-#define __BASICINFOMAC_H__
+#ifndef __BASICINFO_H__
+#define __BASICINFO_H__
 
 #define SIZE 100
 

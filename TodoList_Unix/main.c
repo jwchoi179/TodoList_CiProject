@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "BasicInfoMac.h"
-#include "InputTodoListMac.h"
-#include "CompleteCheckMac.h"
-#include "EditTodoListMac.h"
-#include "DeleteTodoListMac.h"
+#include "BasicInfo.h"
+#include "InputTodoList.h"
+#include "CompleteCheck.h"
+#include "EditTodoList.h"
+#include "DeleteTodoList.h"
 
 enum
 {
@@ -90,6 +90,7 @@ int main()
         default:
             printf("잘못 선택하셨습니다.\n");
             printf("다시 선택하십시오\n");
+            CheckConfimed();
         }
     }
 }

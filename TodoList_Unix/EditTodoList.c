@@ -1,6 +1,6 @@
-#include "BasicInfoMac.h"
-#include "EditDateMac.h"
-#include "EditImportanceMac.h"
+#include "BasicInfo.h"
+#include "EditDate.h"
+#include "EditImportance.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -55,7 +55,6 @@ void EditTitle(int LastListIdx)
 {
     int selectIdx;
     selectIdx = myList->TemporaryIdx;
-    // (8 29 추가) strcpy로 저장할 리스트 번호를 Select 함수를 끌어다씀 -> Select 함수에서 저장한 구조체 변수를 끌어다씀
 
     char *input_title = (char *)malloc(SIZE * sizeof(char));
 
@@ -111,7 +110,7 @@ void EditTodoList(int LastListIdx)
             return;
         }
 
-        system("clear");
+        // system("clear");
 
         while (1)
         {
@@ -128,14 +127,17 @@ void EditTodoList(int LastListIdx)
             if (choice == TITLE)
             {
                 EditTitle(LastListIdx);
+                CheckConfimed();
             }
             else if (choice == DATE)
             {
                 EditDate(LastListIdx);
+                CheckConfimed();
             }
             else if (choice == IMPORTANCE)
             {
                 EditImportance(LastListIdx);
+                CheckConfimed();
             }
             else if (choice == TERMINATE)
             {

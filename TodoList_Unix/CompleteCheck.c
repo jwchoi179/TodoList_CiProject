@@ -1,8 +1,8 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "CompleteCheckMac.h"
-#include "BasicInfoMac.h"
+#include "CompleteCheck.h"
+#include "BasicInfo.h"
 
 // 의도 : 할 일을 완료처리하는 함수
 void CompleteLoop(int ListNum, int CompNum)
