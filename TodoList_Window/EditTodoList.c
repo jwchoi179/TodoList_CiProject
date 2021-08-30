@@ -1,6 +1,6 @@
-#include "BasicInfoMac.h"
-#include "EditDateMac.h"
-#include "EditImportanceMac.h"
+#include "BasicInfo.h"
+#include "EditDate.h"
+#include "EditImportance.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,10 +9,10 @@ void ShowModifyMenu()
 {
     // printf("\n");
     printf("-------------------Menu-------------------\n");
-    printf("1. Á¦¸ñ ¼öÁ¤\n");
-    printf("2. ³¯Â¥ ¼öÁ¤\n");
-    printf("3. Áß¿äµµ ¼öÁ¤\n");
-    printf("0. ¼öÁ¤¸Þ´º Á¾·á\n");
+    printf("1. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½\n");
+    printf("2. ï¿½ï¿½Â¥ ï¿½ï¿½ï¿½ï¿½\n");
+    printf("3. ï¿½ß¿äµµ ï¿½ï¿½ï¿½ï¿½\n");
+    printf("0. ï¿½ï¿½ï¿½ï¿½ï¿½Þ´ï¿½ ï¿½ï¿½ï¿½ï¿½\n");
     printf("\n");
 
     return;
@@ -25,9 +25,9 @@ int ShowChooseMenu(int ListNum)
     while (1)
     {
         system("clear");
-        printf("1. Ç×¸ñ ¹øÈ£ ¼±ÅÃÇÏ±â\n");
-        printf("2. ¼öÁ¤ ±â´É Á¾·á\n");
-        printf("¼±ÅÃ : ");
+        printf("1. ï¿½×¸ï¿½ ï¿½ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½\n");
+        printf("2. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½\n");
+        printf("ï¿½ï¿½ï¿½ï¿½ : ");
 
         getchar();
 
@@ -45,7 +45,7 @@ int ShowChooseMenu(int ListNum)
         else
         {
             printf("\n");
-            printf("Àß¸ø¼±ÅÃÇÏ¼Ì½À´Ï´Ù\n");
+            printf("ï¿½ß¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½\n");
             CheckConfimed();
         }
     }
@@ -55,13 +55,13 @@ void EditTitle(int LastListIdx)
 {
     int selectIdx;
     selectIdx = myList->TemporaryIdx;
-    // (8 29 Ãß°¡) strcpy·Î ÀúÀåÇÒ ¸®½ºÆ® ¹øÈ£¸¦ Select ÇÔ¼ö¸¦ ²ø¾î´Ù¾¸ -> Select ÇÔ¼ö¿¡¼­ ÀúÀåÇÑ ±¸Á¶Ã¼ º¯¼ö¸¦ ²ø¾î´Ù¾¸
+    // (8 29 ï¿½ß°ï¿½) strcpyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È£ï¿½ï¿½ Select ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ù¾ï¿½ -> Select ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ù¾ï¿½
 
     char *input_title = (char *)malloc(SIZE * sizeof(char));
 
     printf("\n");
-    printf("¼öÁ¤ÇÏ°í ½ÍÀº Á¦¸ñÀ» ÀÔ·ÂÇÏ¼¼¿ä\n");
-    printf("ÀÔ·Â : ");
+    printf("ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½\n");
+    printf("ï¿½Ô·ï¿½ : ");
     getchar();
     scanf("%[^\n]", input_title);
 
@@ -90,20 +90,20 @@ void EditTodoList(int LastListIdx)
 
     if (LastListIdx != 0)
     {
-        printf("\n-------ÇöÀç ÀúÀåµÇ¾î ÀÖ´Â Ç×¸ñÀÔ´Ï´Ù--------\n");
+        printf("\n-------ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½Ö´ï¿½ ï¿½×¸ï¿½ï¿½Ô´Ï´ï¿½--------\n");
     }
 
-    // (8 29 Ãß°¡) showmyList ÇÔ¼ö »èÁ¦(2¹ø Áß¿¡ 1¹øÀ¸·Î ÁÙÀÓ)
+    // (8 29 ï¿½ß°ï¿½) showmyList ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½(2ï¿½ï¿½ ï¿½ß¿ï¿½ 1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
     while (1)
     {
         if (LastListIdx == 0)
         {
-            printf("ÀúÀåµÇ¾î ÀÖ´Â ÇÒ ÀÏÀÌ ¾ø½À´Ï´Ù\n");
+            printf("ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½\n");
             printf("\n");
             CheckConfimed();
             return;
         }
-        // (8 29 Ãß°¡) Select ÇÔ¼ö Ãß°¡, ¿ø·¡´Â Edit~ ÇÔ¼ö ¾È¿¡ ÀÖ´ø °ÍÀ» »© ³¿)
+        // (8 29 ï¿½ß°ï¿½) Select ï¿½Ô¼ï¿½ ï¿½ß°ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Edit~ ï¿½Ô¼ï¿½ ï¿½È¿ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½)
         result = ShowChooseMenu(LastListIdx);
 
         if (result == 1)
@@ -121,7 +121,7 @@ void EditTodoList(int LastListIdx)
 
             ShowModifyMenu();
 
-            printf("¼±ÅÃ : ");
+            printf("ï¿½ï¿½ï¿½ï¿½ : ");
             getchar();
             scanf("%d", &choice);
 
@@ -140,8 +140,8 @@ void EditTodoList(int LastListIdx)
             else if (choice == TERMINATE)
             {
                 printf("\n");
-                printf("¼öÁ¤À» ¿Ï·áÇÏ½Ã°Ú½À´Ï´Ù?\n");
-                printf("È®ÀÎ : 1, Ãë¼Ò : 0\n");
+                printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï´ï¿½?\n");
+                printf("È®ï¿½ï¿½ : 1, ï¿½ï¿½ï¿½ : 0\n");
                 scanf("%d", &answer);
 
                 if (answer == 1)
@@ -153,12 +153,12 @@ void EditTodoList(int LastListIdx)
             }
             else
             {
-                printf("Àß¸ø ¼±ÅÃÇÏ¼Ì½À´Ï´Ù\n");
-                printf("´Ù½Ã ¼±ÅÃÇÏ½Ê½Ã¿À\n");
+                printf("ï¿½ß¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½\n");
+                printf("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ê½Ã¿ï¿½\n");
             }
         }
 
-        printf("\n-------¼öÁ¤ Ã³¸®µÈ ÇÒ ÀÏ ³»¿ª ÀÔ´Ï´Ù-------\n");
+        printf("\n-------ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô´Ï´ï¿½-------\n");
         ShowTodoList(myList->TemporaryIdx);
         CheckConfimed();
     }
