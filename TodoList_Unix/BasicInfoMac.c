@@ -1,4 +1,4 @@
-#include "BasicInfoMac.h"
+#include "BasicInfo.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -46,7 +46,7 @@ void ShowTodoList(int idx)
 
 int ShowMyList(int ListNum)
 {
-    system("clear");
+    system("cls");
     int check;
 
     if (ListNum == 0)

@@ -4,15 +4,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#pragma warning(disable : 4996)
 
 void ShowModifyMenu()
 {
     // printf("\n");
     printf("-------------------Menu-------------------\n");
-    printf("1. ���� ����\n");
-    printf("2. ��¥ ����\n");
-    printf("3. �߿䵵 ����\n");
-    printf("0. �����޴� ����\n");
+    printf("1. 제목 수정\n");
+    printf("2. 날짜 수정\n");
+    printf("3. 중요도 수정\n");
+    printf("0. 수정메뉴 종료\n");
     printf("\n");
 
     return;
@@ -25,9 +26,9 @@ int ShowChooseMenu(int ListNum)
     while (1)
     {
         system("cls");
-        printf("1. �׸� ��ȣ �����ϱ�\n");
-        printf("2. ���� ��� ����\n");
-        printf("���� : ");
+        printf("1. 항목 번호 선택하기\n");
+        printf("2. 수정 기능 종료\n");
+        printf("선택 : ");
 
         getchar();
 
@@ -45,7 +46,7 @@ int ShowChooseMenu(int ListNum)
         else
         {
             printf("\n");
-            printf("�߸������ϼ̽��ϴ�\n");
+            printf("잘못선택하셨습니다\n");
             CheckConfimed();
         }
     }
@@ -55,13 +56,13 @@ void EditTitle(int LastListIdx)
 {
     int selectIdx;
     selectIdx = myList->TemporaryIdx;
-    // (8 29 �߰�) strcpy�� ������ ����Ʈ ��ȣ�� Select �Լ��� ����پ� -> Select �Լ����� ������ ����ü ������ ����پ�
+    // (8 29 추가) strcpy로 저장할 리스트 번호를 Select 함수를 끌어다씀 -> Select 함수에서 저장한 구조체 변수를 끌어다씀
 
     char *input_title = (char *)malloc(SIZE * sizeof(char));
 
     printf("\n");
-    printf("�����ϰ� ���� ������ �Է��ϼ���\n");
-    printf("�Է� : ");
+    printf("수정하고 싶은 제목을 입력하세요\n");
+    printf("입력 : ");
     getchar();
     scanf("%[^\n]", input_title);
 
@@ -90,20 +91,20 @@ void EditTodoList(int LastListIdx)
 
     if (LastListIdx != 0)
     {
-        printf("\n-------���� ����Ǿ� �ִ� �׸��Դϴ�--------\n");
+        printf("\n-------현재 저장되어 있는 항목입니다--------\n");
     }
 
-    // (8 29 �߰�) showmyList �Լ� ����(2�� �߿� 1������ ����)
+    // (8 29 추가) showmyList 함수 삭제(2번 중에 1번으로 줄임)
     while (1)
     {
         if (LastListIdx == 0)
         {
-            printf("����Ǿ� �ִ� �� ���� �����ϴ�\n");
+            printf("저장되어 있는 할 일이 없습니다\n");
             printf("\n");
             CheckConfimed();
             return;
         }
-        // (8 29 �߰�) Select �Լ� �߰�, ������ Edit~ �Լ� �ȿ� �ִ� ���� �� ��)
+        // (8 29 추가) Select 함수 추가, 원래는 Edit~ 함수 안에 있던 것을 빼 냄)
         result = ShowChooseMenu(LastListIdx);
 
         if (result == 1)
@@ -121,7 +122,7 @@ void EditTodoList(int LastListIdx)
 
             ShowModifyMenu();
 
-            printf("���� : ");
+            printf("선택 : ");
             getchar();
             scanf("%d", &choice);
 
@@ -140,8 +141,8 @@ void EditTodoList(int LastListIdx)
             else if (choice == TERMINATE)
             {
                 printf("\n");
-                printf("������ �Ϸ��Ͻðڽ��ϴ�?\n");
-                printf("Ȯ�� : 1, ��� : 0\n");
+                printf("수정을 완료하시겠습니다?\n");
+                printf("확인 : 1, 취소 : 0\n");
                 scanf("%d", &answer);
 
                 if (answer == 1)
@@ -153,12 +154,12 @@ void EditTodoList(int LastListIdx)
             }
             else
             {
-                printf("�߸� �����ϼ̽��ϴ�\n");
-                printf("�ٽ� �����Ͻʽÿ�\n");
+                printf("잘못 선택하셨습니다\n");
+                printf("다시 선택하십시오\n");
             }
         }
 
-        printf("\n-------���� ó���� �� �� ���� �Դϴ�-------\n");
+        printf("\n-------수정 처리된 할 일 내역 입니다-------\n");
         ShowTodoList(myList->TemporaryIdx);
         CheckConfimed();
     }

@@ -3,13 +3,14 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#pragma warning(disable : 4996)
 
 void Input_Title(int LastListIdx)
 {
 	char Title[100] = {'\0'};
-	printf("������ �Է����ּ���.\n");
+	printf("제목을 입력해주세요.\n");
 	getchar();
-	scanf("%[^\n]", Title); // ��������, ���� ��ü
+	scanf("%[^\n]", Title); // 공백포함, 문장 전체
 
 	strcpy(myList[LastListIdx].Title, Title);
 }
@@ -23,7 +24,7 @@ void Input_Date(int LastListIdx)
 	{
 
 		printf("\n");
-		printf("��¥�� �����Ͻðڽ��ϱ�? [y / n]\n");
+		printf("날짜를 지정하시겠습니까? [y / n]\n");
 		getchar();
 		scanf("%c", &dateset);
 
@@ -32,7 +33,7 @@ void Input_Date(int LastListIdx)
 			while (1)
 			{
 				printf("\n");
-				printf("��¥�� �Է����ּ���. [ex) 3 29]\n");
+				printf("날짜를 입력해주세요. [ex) 3 29]\n");
 
 				getchar();
 
@@ -41,8 +42,8 @@ void Input_Date(int LastListIdx)
 				if (!month || !day)
 				{
 					printf("\n");
-					printf("�߸��� �����Դϴ�.\n");
-					printf("�ٽ��Է����ּ���.\n");
+					printf("잘못된 형식입니다.\n");
+					printf("다시입력해주세요.\n");
 					while (getchar() != '\n')
 						;
 				}
@@ -66,11 +67,11 @@ void Input_Date(int LastListIdx)
 		else
 		{
 			printf("\n");
-			printf("�߸� �Է��ϼ̽��ϴ�.\n");
-			printf("�ٽ� �������ּ���.\n");
+			printf("잘못 입력하셨습니다.\n");
+			printf("다시 선택해주세요.\n");
 			while (getchar() != '\n')
 				;
-			printf("�ƹ�Ű�� �Է� �� ���͸� �����ּ���.\n");
+			printf("아무키나 입력 후 엔터를 눌러주세요.\n");
 			getchar();
 		}
 	}
@@ -83,7 +84,7 @@ void Set_Importance(int LastListIdx)
 	while (1)
 	{
 		printf("\n");
-		printf("�߿䵵�� �����Ͻðڽ��ϱ�? [y / n]\n");
+		printf("중요도를 설정하시겠습니까? [y / n]\n");
 
 		getchar();
 
@@ -93,7 +94,7 @@ void Set_Importance(int LastListIdx)
 			while (1)
 			{
 				printf("\n");
-				printf("�߿䵵�� ���Դϱ�? [1 / 2 / 3]\n");
+				printf("중요도는 얼마입니까? [1 / 2 / 3]\n");
 				getchar();
 
 				scanf("%d", &importance);
@@ -101,8 +102,8 @@ void Set_Importance(int LastListIdx)
 				if (!importance)
 				{
 					printf("\n");
-					printf("�߸��� �����Դϴ�.\n");
-					printf("�ٽ��Է����ּ���.\n");
+					printf("잘못된 형식입니다.\n");
+					printf("다시입력해주세요.\n");
 					while (getchar() != '\n')
 						;
 				}
@@ -117,8 +118,8 @@ void Set_Importance(int LastListIdx)
 					else
 					{
 						printf("\n");
-						printf("��ȿ���� ���� �����Դϴ�.\n");
-						printf("�ٽ� �������ּ���.\n");
+						printf("유효하지 않은 형식입니다.\n");
+						printf("다시 선택해주세요.\n");
 					}
 				}
 			}
@@ -132,11 +133,11 @@ void Set_Importance(int LastListIdx)
 		else
 		{
 			printf("\n");
-			printf("��ȿ���� ���� �����Դϴ�.\n");
-			printf("�ٽ� �������ּ���.\n");
+			printf("유효하지 않은 형식입니다.\n");
+			printf("다시 선택해주세요.\n");
 			while (getchar() != '\n')
 				;
-			printf("�ƹ�Ű�� �Է� �� ���͸� �����ּ���.\n");
+			printf("아무키나 입력 후 엔터를 눌러주세요.\n");
 			getchar();
 		}
 	}

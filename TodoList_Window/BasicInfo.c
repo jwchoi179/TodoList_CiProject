@@ -1,6 +1,7 @@
 #include "BasicInfo.h"
 #include <stdio.h>
 #include <stdlib.h>
+#pragma warning(disable : 4996)
 
 void DataInit()
 {
@@ -16,13 +17,13 @@ void ShowMenu()
 {
     // printf("\n");
     printf("----------------Menu----------------\n");
-    printf("1. �� �� �Է��ϱ�\n");
-    printf("2. �� �� �Ϸ� üũ�ϱ�\n");
-    printf("3. �� �� �����ϱ�\n");
-    printf("4. �� �� �����ϱ�\n");
-    printf("5. ���� ���� �� �� ���\n");
-    printf("6. �Ϸ�� ���� ���\n");
-    printf("0. ���α׷� ����\n");
+    printf("1. 할 일 입력하기\n");
+    printf("2. 할 일 완료 체크하기\n");
+    printf("3. 할 일 수정하기\n");
+    printf("4. 할 일 삭제하기\n");
+    printf("5. 현재 남은 할 일 출력\n");
+    printf("6. 완료된 일정 출력\n");
+    printf("0. 프로그램 종료\n");
     printf("\n");
 
     return;
@@ -32,14 +33,14 @@ void ShowTodoList(int idx)
 {
     printf("\n");
 
-    printf("�׸� ��ȣ : %d\n", idx + 1);
-    printf("�� �� �̸� : %s\n", myList[idx].Title);
+    printf("항목 번호 : %d\n", idx + 1);
+    printf("할 일 이름 : %s\n", myList[idx].Title);
 
     if (myList[idx].Date.DateChecker == 1)
-        printf("��¥ : %d�� %d��\n", myList[idx].Date.date.month, myList[idx].Date.date.day);
+        printf("날짜 : %d월 %d일\n", myList[idx].Date.date.month, myList[idx].Date.date.day);
 
     if (myList[idx].Importance.ImportanceChecker == 1)
-        printf("�߿䵵 : %d\n", myList[idx].Importance.importance);
+        printf("중요도 : %d\n", myList[idx].Importance.importance);
 
     printf("\n");
 }
@@ -51,7 +52,7 @@ int ShowMyList(int ListNum)
 
     if (ListNum == 0)
     {
-        printf("���� ���� �� ���� �����ϴ�\n");
+        printf("현재 남은 할 일이 없습니다\n");
         printf("\n");
 
         return -1;
@@ -70,7 +71,7 @@ void Select_IDX_In_List(int LastListIdx)
     int selectNum;
 
     ShowMyList(LastListIdx);
-    printf("���� or ���� or �Ϸ�ó���� �ϰ� ���� �׸��� ��ȣ�� �Է��ϼ��� : ");
+    printf("수정 or 삭제 or 완료처리를 하고 싶은 항목의 번호를 입력하세요 : ");
 
     getchar();
 
@@ -82,7 +83,7 @@ void Select_IDX_In_List(int LastListIdx)
     }
     else
     {
-        printf("�ش� �׸��� �����ϴ�\n");
+        printf("해당 항목이 없습니다\n");
     }
 }
 
@@ -94,7 +95,7 @@ void ShowRestWork(int ListNum)
     }
     else
     {
-        printf("���� �� ���Դϴ�\n");
+        printf("남은 할 일입니다\n");
         printf("\n");
         ShowMyList(ListNum);
     }
@@ -105,7 +106,7 @@ void CheckConfimed()
     int check;
     while (1)
     {
-        printf("Ȯ���ϼ����� 1�� �Է����ּ��� : ");
+        printf("확인하셨으면 1을 입력해주세요 : ");
 
         getchar();
 
@@ -115,7 +116,7 @@ void CheckConfimed()
             return;
         else
         {
-            printf("�ٽ� �������ּ���\n");
+            printf("다시 선택해주세요\n");
             printf("\n");
             continue;
         }

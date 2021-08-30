@@ -5,6 +5,7 @@
 #include "CompleteCheck.h"
 #include "EditTodoList.h"
 #include "DeleteTodoList.h"
+#pragma warning(disable : 4996)
 
 enum
 {
@@ -17,7 +18,7 @@ enum
     TERMINATE = 0
 };
 
-int ListNum = 0, CompNum = 0; // �Ϸ�ó���� �׸���� �����ϴ� �迭�� �ε���
+int ListNum = 0, CompNum = 0; // 완료처리한 항목들을 저장하는 배열의 인덱스
 
 int main()
 {
@@ -28,14 +29,14 @@ int main()
 
     while (1)
     {
-        system("clear");
+        system("cls");
         if (ListNum != 0)
         {
             ShowMyList(ListNum);
         }
 
         ShowMenu();
-        printf("���� : ");
+        printf("선택 : ");
         scanf("%d", &choice);
 
         switch (choice)
@@ -88,8 +89,8 @@ int main()
             return 0;
 
         default:
-            printf("�߸� �����ϼ̽��ϴ�.\n");
-            printf("�ٽ� �����Ͻʽÿ�\n");
+            printf("잘못 선택하셨습니다.\n");
+            printf("다시 선택하십시오\n");
         }
     }
 }
