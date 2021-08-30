@@ -3,7 +3,9 @@
 #include <stdlib.h>
 #include "CompleteCheck.h"
 #include "BasicInfo.h"
-#pragma warning(disable: 4996)
+#include "EditTodoList.h"
+
+#pragma warning(disable : 4996)
 
 // 의도 : 할 일을 완료처리하는 함수
 void CompleteLoop(int ListNum, int CompNum)
@@ -47,7 +49,10 @@ void CompleteLoop(int ListNum, int CompNum)
 
 int CompleteCheck(int ListNum, int CompNum) //int 형으로 변경
 {
+    int result;
+
     system("cls");
+
     if (ListNum == 0)
     {
         printf("완료처리할 일정이 없습니다.\n");
@@ -56,6 +61,15 @@ int CompleteCheck(int ListNum, int CompNum) //int 형으로 변경
 
         return 1; //추가
     }
+
+    result = ShowChooseMenu(ListNum);
+
+    if (result == 1)
+    {
+        return;
+    }
+
+    system("cls");
 
     CompleteLoop(ListNum, CompNum);
     return 0; //추가

@@ -2,10 +2,14 @@
 #include <stdlib.h>
 #include "BasicInfo.h"
 #include "DeleteTodoList.h"
-#pragma warning(disable: 4996)
+#include "EditTodoList.h"
+
+#pragma warning(disable : 4996)
 
 int DeleteTodoList(int ListNum) //int형으로 변경
 {
+    int result;
+
     system("cls");
 
     if (ListNum == 0)
@@ -16,9 +20,19 @@ int DeleteTodoList(int ListNum) //int형으로 변경
         return 1; // 추가
     }
 
+    result = ShowChooseMenu(ListNum);
+
+    if (result == 1)
+    {
+        return;
+    }
+
+    system("cls");
+
     ShowMyList(ListNum);
 
     int num;
+
     while (1)
     {
         printf("삭제할 일정의 번호를 입력하세요 : ");
