@@ -3,7 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#pragma warning(disable: 4996)
+
+#pragma warning(disable : 4996)
+
 void MakeNewDate(int selectIdx)
 {
     int month;
@@ -97,7 +99,7 @@ void ModifyDate(int selectIdx)
     }
 }
 
-void EditDate(int LastListIdx)
+void EditDate()
 {
     int selectIdx;
     selectIdx = myList->TemporaryIdx;

@@ -2,7 +2,7 @@
 #define __EDITIMPORTANCE_H__
 
 void ChooseImportanceMenu(int selectIdx);
-void EditImportance(int LastListIdx);
+void EditImportance();
 
 #endif
 #pragma once

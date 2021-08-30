@@ -4,7 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#pragma warning(disable: 4996)
+
+#pragma warning(disable : 4996)
 
 void ShowModifyMenu()
 {
@@ -36,7 +37,6 @@ int ShowChooseMenu(int ListNum)
 
         if (choice == 1)
         {
-            Select_IDX_In_List(ListNum);
             return 0;
         }
         else if (choice == 2)
@@ -46,17 +46,16 @@ int ShowChooseMenu(int ListNum)
         else
         {
             printf("\n");
-            printf("잘못선택하셨습니다\n");
+            printf("잘못 선택하셨습니다\n");
             CheckConfimed();
         }
     }
 }
 
-void EditTitle(int LastListIdx)
+void EditTitle()
 {
     int selectIdx;
     selectIdx = myList->TemporaryIdx;
-    // (8 29 추가) strcpy로 저장할 리스트 번호를 Select 함수를 끌어다씀 -> Select 함수에서 저장한 구조체 변수를 끌어다씀
 
     char *input_title = (char *)malloc(SIZE * sizeof(char));
 
@@ -71,7 +70,7 @@ void EditTitle(int LastListIdx)
     free(input_title);
 }
 
-void EditTodoList(int LastListIdx)
+void EditTodoList(int ListNum)
 {
     int choice;
     int answer;
@@ -89,7 +88,7 @@ void EditTodoList(int LastListIdx)
 
     system("cls");
 
-    if (LastListIdx != 0)
+    if (ListNum != 0)
     {
         printf("\n-------현재 저장되어 있는 항목입니다--------\n");
     }
@@ -97,20 +96,22 @@ void EditTodoList(int LastListIdx)
     // (8 29 추가) showmyList 함수 삭제(2번 중에 1번으로 줄임)
     while (1)
     {
-        if (LastListIdx == 0)
+        if (ListNum == 0)
         {
             printf("저장되어 있는 할 일이 없습니다\n");
             printf("\n");
             CheckConfimed();
             return;
         }
-        // (8 29 추가) Select 함수 추가, 원래는 Edit~ 함수 안에 있던 것을 빼 냄)
-        result = ShowChooseMenu(LastListIdx);
+
+        result = ShowChooseMenu(ListNum);
 
         if (result == 1)
         {
             return;
         }
+
+        Select_IDX_In_List(ListNum);
 
         system("cls");
 
@@ -128,15 +129,15 @@ void EditTodoList(int LastListIdx)
 
             if (choice == TITLE)
             {
-                EditTitle(LastListIdx);
+                EditTitle();
             }
             else if (choice == DATE)
             {
-                EditDate(LastListIdx);
+                EditDate();
             }
             else if (choice == IMPORTANCE)
             {
-                EditImportance(LastListIdx);
+                EditImportance();
             }
             else if (choice == TERMINATE)
             {

@@ -72,7 +72,7 @@ void Select_IDX_In_List(int LastListIdx)
     int selectNum;
 
     ShowMyList(LastListIdx);
-    printf("수정 or 삭제 or 완료처리를 하고 싶은 항목의 번호를 입력하세요 : ");
+    printf("수정을 하고 싶은 항목의 번호를 입력하세요 : ");
 
     getchar();
 
