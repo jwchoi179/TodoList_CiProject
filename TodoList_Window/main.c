@@ -5,7 +5,7 @@
 #include "CompleteCheck.h"
 #include "EditTodoList.h"
 #include "DeleteTodoList.h"
-#pragma warning(disable : 4996)
+#pragma warning(disable: 4996)
 
 enum
 {
@@ -18,7 +18,7 @@ enum
     TERMINATE = 0
 };
 
-int ListNum = 0, CompNum = 0; // ì™„ë£Œì²˜ë¦¬í•œ í•­ëª©ë“¤ì„ ì €ì¥í•˜ëŠ” ë°°ì—´ì˜ ì¸ë±ìŠ¤
+int ListNum = 0, CompNum = 0; // ¿Ï·áÃ³¸®ÇÑ Ç×¸ñµéÀ» ÀúÀåÇÏ´Â ¹è¿­ÀÇ ÀÎµ¦½º
 
 int main()
 {
@@ -36,7 +36,7 @@ int main()
         }
 
         ShowMenu();
-        printf("ì„ íƒ : ");
+        printf("¼±ÅÃ : ");
         scanf("%d", &choice);
 
         switch (choice)
@@ -89,8 +89,9 @@ int main()
             return 0;
 
         default:
-            printf("ì˜ëª» ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.\n");
-            printf("ë‹¤ì‹œ ì„ íƒí•˜ì‹­ì‹œì˜¤\n");
+            printf("Àß¸ø ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.\n");
+            printf("´Ù½Ã ¼±ÅÃÇÏ½Ê½Ã¿À\n");
+            CheckConfimed();
         }
     }
 }

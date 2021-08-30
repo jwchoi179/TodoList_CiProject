@@ -2,18 +2,18 @@
 #include <stdlib.h>
 #include "BasicInfo.h"
 #include "DeleteTodoList.h"
-#pragma warning(disable : 4996)
+#pragma warning(disable: 4996)
 
-int DeleteTodoList(int ListNum) //intí˜•ìœ¼ë¡œ ë³€ê²½
+int DeleteTodoList(int ListNum) //intÇüÀ¸·Î º¯°æ
 {
     system("cls");
 
     if (ListNum == 0)
     {
-        printf("\nì‚­ì œí•  ì¼ì •ì´ ì—†ìŠµë‹ˆë‹¤. \n");
+        printf("\n»èÁ¦ÇÒ ÀÏÁ¤ÀÌ ¾ø½À´Ï´Ù. \n");
         printf("\n");
         CheckConfimed();
-        return 1; // ì¶”ê°€
+        return 1; // Ãß°¡
     }
 
     ShowMyList(ListNum);
@@ -21,13 +21,13 @@ int DeleteTodoList(int ListNum) //intí˜•ìœ¼ë¡œ ë³€ê²½
     int num;
     while (1)
     {
-        printf("ì‚­ì œí•  ì¼ì •ì˜ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
+        printf("»èÁ¦ÇÒ ÀÏÁ¤ÀÇ ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
         scanf("%d", &num);
 
         if (num < 1 || num > ListNum)
         {
-            printf("ì¼ì •ì„ ì°¾ì§€ ëª»í•˜ì˜€ìŠµë‹ˆë‹¤. \n");
-            printf("ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš”. \n");
+            printf("ÀÏÁ¤À» Ã£Áö ¸øÇÏ¿´½À´Ï´Ù. \n");
+            printf("´Ù½Ã ¼±ÅÃÇÏ¼¼¿ä. \n");
         }
         else
         {
@@ -37,14 +37,14 @@ int DeleteTodoList(int ListNum) //intí˜•ìœ¼ë¡œ ë³€ê²½
 
     num -= 1;
 
-    // ì‚­ì œ ì²˜ë¦¬ ì¬í™•ì¸ ì§ˆë¬¸
+    // »èÁ¦ Ã³¸® ÀçÈ®ÀÎ Áú¹®
 
-    printf("\ní•´ë‹¹ ì¼ì •ì„ ì‚­ì œí–ˆìŠµë‹ˆë‹¤.\n");
+    printf("\nÇØ´ç ÀÏÁ¤À» »èÁ¦Çß½À´Ï´Ù.\n");
     ShowTodoList(num);
 
     for (int i = num; i < ListNum - num; ++i)
     {
         myList[i] = myList[i + 1];
     }
-    return 0; //ì¶”ê°€
+    return 0; //Ãß°¡
 }

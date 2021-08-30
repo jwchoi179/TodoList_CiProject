@@ -8,13 +8,13 @@ add_executable(
     CompleteCheck.h
     DeleteTodoList.c
     DeleteTodoList.h
-    EditDate.c
-    EditDate.h
+    EditDateMac.c
+    EditDateMac.h
     EditImportance.c
     EditImportance.h
     EditTodoList.c
     EditTodoList.h
     InputTodoList.c
     InputTodoList.h
-    main.c
+    mainMac.c
 )

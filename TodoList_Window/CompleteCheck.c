@@ -3,9 +3,9 @@
 #include <stdlib.h>
 #include "CompleteCheck.h"
 #include "BasicInfo.h"
-#pragma warning(disable : 4996)
+#pragma warning(disable: 4996)
 
-// ì˜ë„ : í•  ì¼ì„ ì™„ë£Œì²˜ë¦¬í•˜ëŠ” í•¨ìˆ˜
+// ÀÇµµ : ÇÒ ÀÏÀ» ¿Ï·áÃ³¸®ÇÏ´Â ÇÔ¼ö
 void CompleteLoop(int ListNum, int CompNum)
 {
     int choice;
@@ -14,16 +14,16 @@ void CompleteLoop(int ListNum, int CompNum)
     {
         ShowMyList(ListNum);
 
-        printf("ì™„ë£Œì²˜ë¦¬í•  ì¼ì •ì˜ ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”: ");
+        printf("¿Ï·áÃ³¸®ÇÒ ÀÏÁ¤ÀÇ ¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä: ");
         scanf("%d", &choice);
         printf("\n");
 
-        // ë¬¸ìì—´ ê¸¸ì´ í•¨ìˆ˜ë¡œ titleì— ë‚´ìš©ì´ ìˆëŠ”ì§€ íŒë‹¨
+        // ¹®ÀÚ¿­ ±æÀÌ ÇÔ¼ö·Î title¿¡ ³»¿ëÀÌ ÀÖ´ÂÁö ÆÇ´Ü
 
         if (choice > ListNum)
         {
-            printf("í•´ë‹¹ ë²ˆí˜¸ì— ì™„ë£Œí•  ì¼ì •ì´ ì—†ìŠµë‹ˆë‹¤.\n");
-            printf("ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš”\n");
+            printf("ÇØ´ç ¹øÈ£¿¡ ¿Ï·áÇÒ ÀÏÁ¤ÀÌ ¾ø½À´Ï´Ù.\n");
+            printf("´Ù½Ã ¼±ÅÃÇÏ¼¼¿ä\n");
             continue;
         }
         else if (choice <= ListNum)
@@ -32,47 +32,47 @@ void CompleteLoop(int ListNum, int CompNum)
         }
     }
 
-    // ì™„ë£Œì²˜ë¦¬ ì¬í™•ì¸ ì§ˆë¬¸
+    // ¿Ï·áÃ³¸® ÀçÈ®ÀÎ Áú¹®
 
     choice -= 1;
 
-    myCompList[CompNum] = myList[choice]; // ì™„ë£Œ ì²˜ë¦¬ëœ í•­ëª©ë“¤ì„ ì €ì¥í•˜ëŠ” ì—°ì‚°
+    myCompList[CompNum] = myList[choice]; // ¿Ï·á Ã³¸®µÈ Ç×¸ñµéÀ» ÀúÀåÇÏ´Â ¿¬»ê
 
-    // ê°’ ë®ì–´ì”Œìš°ëŠ” ì‘ì—…
+    // °ª µ¤¾î¾º¿ì´Â ÀÛ¾÷
     for (int i = choice; i < ListNum - choice; i++)
     {
         myList[i] = myList[i + 1];
     }
 }
 
-int CompleteCheck(int ListNum, int CompNum) //int í˜•ìœ¼ë¡œ ë³€ê²½
+int CompleteCheck(int ListNum, int CompNum) //int ÇüÀ¸·Î º¯°æ
 {
     system("cls");
     if (ListNum == 0)
     {
-        printf("ì™„ë£Œì²˜ë¦¬í•  ì¼ì •ì´ ì—†ìŠµë‹ˆë‹¤.\n");
+        printf("¿Ï·áÃ³¸®ÇÒ ÀÏÁ¤ÀÌ ¾ø½À´Ï´Ù.\n");
         printf("\n");
         CheckConfimed();
 
-        return 1; //ì¶”ê°€
+        return 1; //Ãß°¡
     }
 
     CompleteLoop(ListNum, CompNum);
-    return 0; //ì¶”ê°€
+    return 0; //Ãß°¡
 }
 
 void ShowCompList(int idx)
 {
     printf("\n");
 
-    printf("í•­ëª© ë²ˆí˜¸ : %d\n", idx + 1);
-    printf("í•  ì¼ ì´ë¦„ : %s\n", myCompList[idx].Title);
+    printf("Ç×¸ñ ¹øÈ£ : %d\n", idx + 1);
+    printf("ÇÒ ÀÏ ÀÌ¸§ : %s\n", myCompList[idx].Title);
 
     if (myCompList[idx].Date.DateChecker == 1)
-        printf("ë‚ ì§œ : %dì›” %dì¼\n", myCompList[idx].Date.date.month, myCompList[idx].Date.date.day);
+        printf("³¯Â¥ : %d¿ù %dÀÏ\n", myCompList[idx].Date.date.month, myCompList[idx].Date.date.day);
 
     if (myCompList[idx].Importance.ImportanceChecker == 1)
-        printf("ì¤‘ìš”ë„ : %d\n", myCompList[idx].Importance.importance);
+        printf("Áß¿äµµ : %d\n", myCompList[idx].Importance.importance);
 
     printf("\n");
 }
@@ -83,7 +83,7 @@ void ShowMyCompList(int CompNum)
 
     if (CompNum == 0)
     {
-        printf("ì™„ë£Œì²˜ë¦¬í•œ ì¼ì •ì´ ì—†ìŠµë‹ˆë‹¤.\n");
+        printf("¿Ï·áÃ³¸®ÇÑ ÀÏÁ¤ÀÌ ¾ø½À´Ï´Ù.\n");
         printf("\n");
     }
 

@@ -1,6 +1,7 @@
 #include "BasicInfo.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 #pragma warning(disable : 4996)
 
 void DataInit()
@@ -17,13 +18,13 @@ void ShowMenu()
 {
     // printf("\n");
     printf("----------------Menu----------------\n");
-    printf("1. í•  ì¼ ì…ë ¥í•˜ê¸°\n");
-    printf("2. í•  ì¼ ì™„ë£Œ ì²´í¬í•˜ê¸°\n");
-    printf("3. í•  ì¼ ìˆ˜ì •í•˜ê¸°\n");
-    printf("4. í•  ì¼ ì‚­ì œí•˜ê¸°\n");
-    printf("5. í˜„ì¬ ë‚¨ì€ í•  ì¼ ì¶œë ¥\n");
-    printf("6. ì™„ë£Œëœ ì¼ì • ì¶œë ¥\n");
-    printf("0. í”„ë¡œê·¸ë¨ ì¢…ë£Œ\n");
+    printf("1. ÇÒ ÀÏ ÀÔ·ÂÇÏ±â\n");
+    printf("2. ÇÒ ÀÏ ¿Ï·á Ã¼Å©ÇÏ±â\n");
+    printf("3. ÇÒ ÀÏ ¼öÁ¤ÇÏ±â\n");
+    printf("4. ÇÒ ÀÏ »èÁ¦ÇÏ±â\n");
+    printf("5. ÇöÀç ³²Àº ÇÒ ÀÏ Ãâ·Â\n");
+    printf("6. ¿Ï·áµÈ ÀÏÁ¤ Ãâ·Â\n");
+    printf("0. ÇÁ·Î±×·¥ Á¾·á\n");
     printf("\n");
 
     return;
@@ -33,14 +34,14 @@ void ShowTodoList(int idx)
 {
     printf("\n");
 
-    printf("í•­ëª© ë²ˆí˜¸ : %d\n", idx + 1);
-    printf("í•  ì¼ ì´ë¦„ : %s\n", myList[idx].Title);
+    printf("Ç×¸ñ ¹øÈ£ : %d\n", idx + 1);
+    printf("ÇÒ ÀÏ ÀÌ¸§ : %s\n", myList[idx].Title);
 
     if (myList[idx].Date.DateChecker == 1)
-        printf("ë‚ ì§œ : %dì›” %dì¼\n", myList[idx].Date.date.month, myList[idx].Date.date.day);
+        printf("³¯Â¥ : %d¿ù %dÀÏ\n", myList[idx].Date.date.month, myList[idx].Date.date.day);
 
     if (myList[idx].Importance.ImportanceChecker == 1)
-        printf("ì¤‘ìš”ë„ : %d\n", myList[idx].Importance.importance);
+        printf("Áß¿äµµ : %d\n", myList[idx].Importance.importance);
 
     printf("\n");
 }
@@ -52,7 +53,7 @@ int ShowMyList(int ListNum)
 
     if (ListNum == 0)
     {
-        printf("í˜„ì¬ ë‚¨ì€ í•  ì¼ì´ ì—†ìŠµë‹ˆë‹¤\n");
+        printf("ÇöÀç ³²Àº ÇÒ ÀÏÀÌ ¾ø½À´Ï´Ù\n");
         printf("\n");
 
         return -1;
@@ -71,7 +72,7 @@ void Select_IDX_In_List(int LastListIdx)
     int selectNum;
 
     ShowMyList(LastListIdx);
-    printf("ìˆ˜ì • or ì‚­ì œ or ì™„ë£Œì²˜ë¦¬ë¥¼ í•˜ê³  ì‹¶ì€ í•­ëª©ì˜ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
+    printf("¼öÁ¤ or »èÁ¦ or ¿Ï·áÃ³¸®¸¦ ÇÏ°í ½ÍÀº Ç×¸ñÀÇ ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
 
     getchar();
 
@@ -83,7 +84,7 @@ void Select_IDX_In_List(int LastListIdx)
     }
     else
     {
-        printf("í•´ë‹¹ í•­ëª©ì´ ì—†ìŠµë‹ˆë‹¤\n");
+        printf("ÇØ´ç Ç×¸ñÀÌ ¾ø½À´Ï´Ù\n");
     }
 }
 
@@ -95,7 +96,7 @@ void ShowRestWork(int ListNum)
     }
     else
     {
-        printf("ë‚¨ì€ í•  ì¼ì…ë‹ˆë‹¤\n");
+        printf("³²Àº ÇÒ ÀÏÀÔ´Ï´Ù\n");
         printf("\n");
         ShowMyList(ListNum);
     }
@@ -106,7 +107,7 @@ void CheckConfimed()
     int check;
     while (1)
     {
-        printf("í™•ì¸í•˜ì…¨ìœ¼ë©´ 1ì„ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
+        printf("È®ÀÎÇÏ¼ÌÀ¸¸é 1À» ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
 
         getchar();
 
@@ -116,8 +117,14 @@ void CheckConfimed()
             return;
         else
         {
-            printf("ë‹¤ì‹œ ì„ íƒí•´ì£¼ì„¸ìš”\n");
+
             printf("\n");
+            printf("À¯È¿ÇÏÁö ¾ÊÀº Çü½ÄÀÔ´Ï´Ù.\n");
+            printf("´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä.\n");
+            while (getchar() != '\n')
+                ;
+            printf("¾Æ¹«Å°³ª ÀÔ·Â ÈÄ ¿£ÅÍ¸¦ ´­·¯ÁÖ¼¼¿ä.\n");
+            getchar();
             continue;
         }
     }

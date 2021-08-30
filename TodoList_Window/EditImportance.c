@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#pragma warning(disable : 4996)
+#pragma warning(disable: 4996)
 
 void ChooseImportanceMenu(int selectIdx)
 {
@@ -12,10 +12,10 @@ void ChooseImportanceMenu(int selectIdx)
 
     if (myList[selectIdx].Importance.ImportanceChecker == 0)
     {
-        printf("í˜„ì¬ ì €ì¥ëœ ì¤‘ìš”ë„ê°€ ì—†ìŠµë‹ˆë‹¤.\n");
+        printf("ÇöÀç ÀúÀåµÈ Áß¿äµµ°¡ ¾ø½À´Ï´Ù.\n");
         printf("\n");
-        printf("ì¤‘ìš”ë„ë¥¼ ìƒˆë¡œ ì¶”ê°€í•˜ì‹œê² ìŠµë‹ˆê¹Œ? (y/n)\n");
-        printf("ì„ íƒ : ");
+        printf("Áß¿äµµ¸¦ »õ·Î Ãß°¡ÇÏ½Ã°Ú½À´Ï±î? (y/n)\n");
+        printf("¼±ÅÃ : ");
 
         getchar();
 
@@ -27,8 +27,8 @@ void ChooseImportanceMenu(int selectIdx)
             while (1)
             {
                 printf("\n");
-                printf("ìƒˆë¡œìš´ ì¤‘ìš”ë„ë¥¼ ë¶€ì—¬í•˜ì‹­ì‹œì˜¤. (1, 2, 3)\n");
-                printf("ì„ íƒ : ");
+                printf("»õ·Î¿î Áß¿äµµ¸¦ ºÎ¿©ÇÏ½Ê½Ã¿À. (1, 2, 3)\n");
+                printf("¼±ÅÃ : ");
 
                 getchar();
 
@@ -41,7 +41,7 @@ void ChooseImportanceMenu(int selectIdx)
                 }
                 else
                 {
-                    printf("ìœ íš¨í•˜ì§€ ì•Šì€ í˜•ì‹ì…ë‹ˆë‹¤\n");
+                    printf("À¯È¿ÇÏÁö ¾ÊÀº Çü½ÄÀÔ´Ï´Ù\n");
                     printf("\n");
                 }
             }
@@ -51,8 +51,8 @@ void ChooseImportanceMenu(int selectIdx)
         }
         else if (choice == 'n')
         {
-            printf("ì¤‘ìš”ë„ë¥¼ ìˆ˜ì •í•˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤\n");
-            printf("ìˆ˜ì • ì„ íƒ í™”ë©´ìœ¼ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤");
+            printf("Áß¿äµµ¸¦ ¼öÁ¤ÇÏÁö ¾Ê¾Ò½À´Ï´Ù\n");
+            printf("¼öÁ¤ ¼±ÅÃ È­¸éÀ¸·Î µ¹¾Æ°©´Ï´Ù");
             return;
         }
     }
@@ -60,10 +60,10 @@ void ChooseImportanceMenu(int selectIdx)
     {
         while (1)
         {
-            printf("í˜„ì¬ ì €ì¥ëœ ì¤‘ìš”ë„ê°€ ìˆìŠµë‹ˆë‹¤.\n");
-            printf("í˜„ì¬ ì €ì¥ëœ ì¤‘ìš”ë„ëŠ” %dì…ë‹ˆë‹¤\n", myList[selectIdx].Importance.importance);
-            printf("ì¤‘ìš”ë„ë¥¼ ìˆ˜ì •í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\n");
-            printf("ì„ íƒ (y/n) : ");
+            printf("ÇöÀç ÀúÀåµÈ Áß¿äµµ°¡ ÀÖ½À´Ï´Ù.\n");
+            printf("ÇöÀç ÀúÀåµÈ Áß¿äµµ´Â %dÀÔ´Ï´Ù\n", myList[selectIdx].Importance.importance);
+            printf("Áß¿äµµ¸¦ ¼öÁ¤ÇÏ½Ã°Ú½À´Ï±î?\n");
+            printf("¼±ÅÃ (y/n) : ");
 
             getchar();
 
@@ -74,9 +74,9 @@ void ChooseImportanceMenu(int selectIdx)
                 int choice_menu;
 
                 printf("------Menu------\n");
-                printf("1. í˜„ì¬ ì €ì¥ëœ ì¤‘ìš”ë„ë¥¼ ìˆ˜ì •\n");
-                printf("2. í˜„ì¬ ì €ì¥ëœ ì¤‘ìš”ë„ë¥¼ ì‚­ì œ\n");
-                printf("ì„ íƒ (1 or 2) : ");
+                printf("1. ÇöÀç ÀúÀåµÈ Áß¿äµµ¸¦ ¼öÁ¤\n");
+                printf("2. ÇöÀç ÀúÀåµÈ Áß¿äµµ¸¦ »èÁ¦\n");
+                printf("¼±ÅÃ (1 or 2) : ");
 
                 getchar();
 
@@ -86,10 +86,10 @@ void ChooseImportanceMenu(int selectIdx)
                 {
                     importance = (int *)malloc(sizeof(int));
 
-                    printf("í˜„ì¬ ì €ì¥ëœ ì¤‘ìš”ë„ë¥¼ ìˆ˜ì •í•©ë‹ˆë‹¤\n");
+                    printf("ÇöÀç ÀúÀåµÈ Áß¿äµµ¸¦ ¼öÁ¤ÇÕ´Ï´Ù\n");
                     while (1)
                     {
-                        printf("ìƒˆë¡œ ë¶€ì—¬í•  ì¤‘ìš”ë„ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
+                        printf("»õ·Î ºÎ¿©ÇÒ Áß¿äµµ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
                         scanf("%d", importance);
                         if (*importance == 1 || *importance == 2 || *importance == 3)
                         {
@@ -97,7 +97,7 @@ void ChooseImportanceMenu(int selectIdx)
                             break;
                         }
                         else
-                            printf("ìœ íš¨í•˜ì§€ ì•Šì€ í˜•ì‹ì…ë‹ˆë‹¤\n");
+                            printf("À¯È¿ÇÏÁö ¾ÊÀº Çü½ÄÀÔ´Ï´Ù\n");
                     }
 
                     free(importance);
@@ -105,19 +105,19 @@ void ChooseImportanceMenu(int selectIdx)
                 }
                 else if (choice_menu == 2)
                 {
-                    printf("í˜„ì¬ ì €ì¥ëœ ì¤‘ìš”ë„ë¥¼ ì‚­ì œí•©ë‹ˆë‹¤\n");
+                    printf("ÇöÀç ÀúÀåµÈ Áß¿äµµ¸¦ »èÁ¦ÇÕ´Ï´Ù\n");
                     myList[selectIdx].Importance.ImportanceChecker = 0;
                     return;
                 }
                 else
                 {
-                    printf("ì˜ëª»ëœ ì„ íƒì…ë‹ˆë‹¤.\n");
-                    printf("ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš”\n");
+                    printf("Àß¸øµÈ ¼±ÅÃÀÔ´Ï´Ù.\n");
+                    printf("´Ù½Ã ¼±ÅÃÇÏ¼¼¿ä\n");
                 }
             }
             else if (choice == 'n')
             {
-                printf("ì¤‘ìš”ë„ë¥¼ ìˆ˜ì •í•˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤\n");
+                printf("Áß¿äµµ¸¦ ¼öÁ¤ÇÏÁö ¾Ê¾Ò½À´Ï´Ù\n");
                 return;
             }
         }

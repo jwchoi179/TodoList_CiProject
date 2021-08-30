@@ -4,16 +4,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#pragma warning(disable : 4996)
+#pragma warning(disable: 4996)
 
 void ShowModifyMenu()
 {
     // printf("\n");
     printf("-------------------Menu-------------------\n");
-    printf("1. ì œëª© ìˆ˜ì •\n");
-    printf("2. ë‚ ì§œ ìˆ˜ì •\n");
-    printf("3. ì¤‘ìš”ë„ ìˆ˜ì •\n");
-    printf("0. ìˆ˜ì •ë©”ë‰´ ì¢…ë£Œ\n");
+    printf("1. Á¦¸ñ ¼öÁ¤\n");
+    printf("2. ³¯Â¥ ¼öÁ¤\n");
+    printf("3. Áß¿äµµ ¼öÁ¤\n");
+    printf("0. ¼öÁ¤¸Þ´º Á¾·á\n");
     printf("\n");
 
     return;
@@ -26,9 +26,9 @@ int ShowChooseMenu(int ListNum)
     while (1)
     {
         system("cls");
-        printf("1. í•­ëª© ë²ˆí˜¸ ì„ íƒí•˜ê¸°\n");
-        printf("2. ìˆ˜ì • ê¸°ëŠ¥ ì¢…ë£Œ\n");
-        printf("ì„ íƒ : ");
+        printf("1. Ç×¸ñ ¹øÈ£ ¼±ÅÃÇÏ±â\n");
+        printf("2. ¼öÁ¤ ±â´É Á¾·á\n");
+        printf("¼±ÅÃ : ");
 
         getchar();
 
@@ -46,7 +46,7 @@ int ShowChooseMenu(int ListNum)
         else
         {
             printf("\n");
-            printf("ìž˜ëª»ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤\n");
+            printf("Àß¸ø¼±ÅÃÇÏ¼Ì½À´Ï´Ù\n");
             CheckConfimed();
         }
     }
@@ -56,13 +56,13 @@ void EditTitle(int LastListIdx)
 {
     int selectIdx;
     selectIdx = myList->TemporaryIdx;
-    // (8 29 ì¶”ê°€) strcpyë¡œ ì €ìž¥í•  ë¦¬ìŠ¤íŠ¸ ë²ˆí˜¸ë¥¼ Select í•¨ìˆ˜ë¥¼ ëŒì–´ë‹¤ì”€ -> Select í•¨ìˆ˜ì—ì„œ ì €ìž¥í•œ êµ¬ì¡°ì²´ ë³€ìˆ˜ë¥¼ ëŒì–´ë‹¤ì”€
+    // (8 29 Ãß°¡) strcpy·Î ÀúÀåÇÒ ¸®½ºÆ® ¹øÈ£¸¦ Select ÇÔ¼ö¸¦ ²ø¾î´Ù¾¸ -> Select ÇÔ¼ö¿¡¼­ ÀúÀåÇÑ ±¸Á¶Ã¼ º¯¼ö¸¦ ²ø¾î´Ù¾¸
 
     char *input_title = (char *)malloc(SIZE * sizeof(char));
 
     printf("\n");
-    printf("ìˆ˜ì •í•˜ê³  ì‹¶ì€ ì œëª©ì„ ìž…ë ¥í•˜ì„¸ìš”\n");
-    printf("ìž…ë ¥ : ");
+    printf("¼öÁ¤ÇÏ°í ½ÍÀº Á¦¸ñÀ» ÀÔ·ÂÇÏ¼¼¿ä\n");
+    printf("ÀÔ·Â : ");
     getchar();
     scanf("%[^\n]", input_title);
 
@@ -91,20 +91,20 @@ void EditTodoList(int LastListIdx)
 
     if (LastListIdx != 0)
     {
-        printf("\n-------í˜„ìž¬ ì €ìž¥ë˜ì–´ ìžˆëŠ” í•­ëª©ìž…ë‹ˆë‹¤--------\n");
+        printf("\n-------ÇöÀç ÀúÀåµÇ¾î ÀÖ´Â Ç×¸ñÀÔ´Ï´Ù--------\n");
     }
 
-    // (8 29 ì¶”ê°€) showmyList í•¨ìˆ˜ ì‚­ì œ(2ë²ˆ ì¤‘ì— 1ë²ˆìœ¼ë¡œ ì¤„ìž„)
+    // (8 29 Ãß°¡) showmyList ÇÔ¼ö »èÁ¦(2¹ø Áß¿¡ 1¹øÀ¸·Î ÁÙÀÓ)
     while (1)
     {
         if (LastListIdx == 0)
         {
-            printf("ì €ìž¥ë˜ì–´ ìžˆëŠ” í•  ì¼ì´ ì—†ìŠµë‹ˆë‹¤\n");
+            printf("ÀúÀåµÇ¾î ÀÖ´Â ÇÒ ÀÏÀÌ ¾ø½À´Ï´Ù\n");
             printf("\n");
             CheckConfimed();
             return;
         }
-        // (8 29 ì¶”ê°€) Select í•¨ìˆ˜ ì¶”ê°€, ì›ëž˜ëŠ” Edit~ í•¨ìˆ˜ ì•ˆì— ìžˆë˜ ê²ƒì„ ë¹¼ ëƒ„)
+        // (8 29 Ãß°¡) Select ÇÔ¼ö Ãß°¡, ¿ø·¡´Â Edit~ ÇÔ¼ö ¾È¿¡ ÀÖ´ø °ÍÀ» »© ³¿)
         result = ShowChooseMenu(LastListIdx);
 
         if (result == 1)
@@ -122,7 +122,7 @@ void EditTodoList(int LastListIdx)
 
             ShowModifyMenu();
 
-            printf("ì„ íƒ : ");
+            printf("¼±ÅÃ : ");
             getchar();
             scanf("%d", &choice);
 
@@ -141,8 +141,8 @@ void EditTodoList(int LastListIdx)
             else if (choice == TERMINATE)
             {
                 printf("\n");
-                printf("ìˆ˜ì •ì„ ì™„ë£Œí•˜ì‹œê² ìŠµë‹ˆë‹¤?\n");
-                printf("í™•ì¸ : 1, ì·¨ì†Œ : 0\n");
+                printf("¼öÁ¤À» ¿Ï·áÇÏ½Ã°Ú½À´Ï±î?\n");
+                printf("È®ÀÎ : 1, Ãë¼Ò : 0\n");
                 scanf("%d", &answer);
 
                 if (answer == 1)
@@ -154,12 +154,12 @@ void EditTodoList(int LastListIdx)
             }
             else
             {
-                printf("ìž˜ëª» ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤\n");
-                printf("ë‹¤ì‹œ ì„ íƒí•˜ì‹­ì‹œì˜¤\n");
+                printf("Àß¸ø ¼±ÅÃÇÏ¼Ì½À´Ï´Ù\n");
+                printf("´Ù½Ã ¼±ÅÃÇÏ½Ê½Ã¿À\n");
             }
         }
 
-        printf("\n-------ìˆ˜ì • ì²˜ë¦¬ëœ í•  ì¼ ë‚´ì—­ ìž…ë‹ˆë‹¤-------\n");
+        printf("\n-------¼öÁ¤ Ã³¸®µÈ ÇÒ ÀÏ ³»¿ª ÀÔ´Ï´Ù-------\n");
         ShowTodoList(myList->TemporaryIdx);
         CheckConfimed();
     }

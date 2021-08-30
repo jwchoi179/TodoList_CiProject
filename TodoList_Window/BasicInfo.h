@@ -5,13 +5,13 @@
 
 typedef struct _detailDate
 {
-    int month; // ë‚ ì§œì˜ ì›”(Month)
-    int day;   // ë‚ ì§œì˜ ì¼(Day)
+    int month; // ³¯Â¥ÀÇ ¿ù(Month)
+    int day;   // ³¯Â¥ÀÇ ÀÏ(Day)
 } DetailDate;
 
 typedef struct _date
 {
-    DetailDate date; // ì‹œì‘ ë‚ ì§œ ë° í•´ì•¼í•˜ëŠ” ë‚ ì§œ
+    DetailDate date; // ½ÃÀÛ ³¯Â¥ ¹× ÇØ¾ßÇÏ´Â ³¯Â¥
     int DateChecker;
 } Date;
 
@@ -23,15 +23,15 @@ typedef struct _importance
 
 typedef struct _todolist
 {
-    Date Date; // í•  ì¼ì˜ ë‚ ì§œ
+    Date Date; // ÇÒ ÀÏÀÇ ³¯Â¥
     Importance Importance;
-    // ì¤‘ìš”ë„ëŠ” 1, 2, 3ìœ¼ë¡œ ìš°ì„ ìˆœìœ„ë¥¼ ë¶€ì—¬í•©ë‹ˆë‹¤
-    int TemporaryIdx; // êµ¬ì¡°ì²´ ë³€ìˆ˜ ì¶”ê°€
-    char Title[SIZE]; // í•  ì¼ì˜ ì œëª©
+    // Áß¿äµµ´Â 1, 2, 3À¸·Î ¿ì¼±¼øÀ§¸¦ ºÎ¿©ÇÕ´Ï´Ù
+    int TemporaryIdx; // ±¸Á¶Ã¼ º¯¼ö Ãß°¡
+    char Title[SIZE]; // ÇÒ ÀÏÀÇ Á¦¸ñ
 } List;
 
-List myCompList[SIZE]; // ì™„ë£Œì²˜ë¦¬ë¥¼ í•œ í•­ëª©ë“¤ì„ ì €ì¥í•œ ë°°ì—´
-List myList[SIZE];     // í•  ì¼ë“¤ì„ ì €ì¥í•  ë°°ì—´
+List myCompList[SIZE]; // ¿Ï·áÃ³¸®¸¦ ÇÑ Ç×¸ñµéÀ» ÀúÀåÇÑ ¹è¿­
+List myList[SIZE];     // ÇÒ ÀÏµéÀ» ÀúÀåÇÒ ¹è¿­
 
 void DataInit();
 void ShowMenu();
