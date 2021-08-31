@@ -134,7 +134,7 @@ void ChooseImportanceMenu(int selectIdx)
     }
 }
 
-void EditImportance(int LastListIdx)
+void EditImportance()
 {
     int selectIdx;
     selectIdx = myList->TemporaryIdx;

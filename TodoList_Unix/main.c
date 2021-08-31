@@ -29,6 +29,7 @@ int main()
     while (1)
     {
         system("clear");
+
         if (ListNum != 0)
         {
             ShowMyList(ListNum);

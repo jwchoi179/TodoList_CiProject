@@ -1,10 +1,9 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "CompleteCheck.h"
 #include "BasicInfo.h"
+#include "CompleteCheck.h"
 
-// 의도 : 할 일을 완료처리하는 함수
 void CompleteLoop(int ListNum, int CompNum)
 {
     int choice;
@@ -46,7 +45,10 @@ void CompleteLoop(int ListNum, int CompNum)
 
 int CompleteCheck(int ListNum, int CompNum) //int 형으로 변경
 {
+    int result;
+
     system("clear");
+
     if (ListNum == 0)
     {
         printf("완료처리할 일정이 없습니다.\n");
@@ -55,6 +57,15 @@ int CompleteCheck(int ListNum, int CompNum) //int 형으로 변경
 
         return 1; //추가
     }
+
+    result = ShowChooseMenu(ListNum);
+
+    if (result == 1)
+    {
+        return 0;
+    }
+
+    system("clear");
 
     CompleteLoop(ListNum, CompNum);
     return 0; //추가

@@ -16,7 +16,6 @@ void DataInit()
 
 void ShowMenu()
 {
-    // printf("\n");
     printf("----------------Menu----------------\n");
     printf("1. 할 일 입력하기\n");
     printf("2. 할 일 완료 체크하기\n");

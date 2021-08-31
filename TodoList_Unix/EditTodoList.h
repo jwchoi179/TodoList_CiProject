@@ -4,12 +4,12 @@
 #include "EditTodoList.h"
 
 void ShowModifyMenu();
-void EditTitle(int LastListIdx);
+void EditTitle();
 void MakeNewDate(int selectIdx);
 void ModifyDate(int selectIdx);
-void EditDate(int LastListIdx);
+void EditDate();
 void ChooseImportanceMenu(int selectIdx);
-void EditImportance(int LastListIdx);
+void EditImportance();
 void EditTodoList(int LastListIdx);
 
 #endif

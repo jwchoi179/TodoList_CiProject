@@ -3,6 +3,6 @@
 
 void MakeNewDate(int selectIdx);
 void ModifyDate(int selectIdx);
-void EditDate(int LastListIdx);
+void EditDate();
 
 #endif

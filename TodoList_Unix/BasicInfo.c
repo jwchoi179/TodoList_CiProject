@@ -14,7 +14,6 @@ void DataInit()
 
 void ShowMenu()
 {
-    // printf("\n");
     printf("----------------Menu----------------\n");
     printf("1. 할 일 입력하기\n");
     printf("2. 할 일 완료 체크하기\n");
@@ -70,7 +69,7 @@ void Select_IDX_In_List(int LastListIdx)
     int selectNum;
 
     ShowMyList(LastListIdx);
-    printf("수정 or 삭제 or 완료처리를 하고 싶은 항목의 번호를 입력하세요 : ");
+    printf("수정을 하고 싶은 항목의 번호를 입력하세요 : ");
 
     getchar();
 
@@ -115,9 +114,47 @@ void CheckConfimed()
             return;
         else
         {
-            printf("다시 선택해주세요\n");
+
             printf("\n");
+            printf("유효하지 않은 형식입니다.\n");
+            printf("다시 선택해주세요.\n");
+            while (getchar() != '\n')
+                ;
+            printf("아무키나 입력 후 엔터를 눌러주세요.\n");
+            getchar();
             continue;
+        }
+    }
+}
+
+int ShowChooseMenu(int ListNum)
+{
+    int choice;
+
+    while (1)
+    {
+        system("clear");
+        printf("1. 항목 번호 선택하기\n");
+        printf("2. 현재 메뉴얼 종료\n");
+        printf("선택 : ");
+
+        getchar();
+
+        scanf("%d", &choice);
+
+        if (choice == 1)
+        {
+            return 0;
+        }
+        else if (choice == 2)
+        {
+            return 1;
+        }
+        else
+        {
+            printf("\n");
+            printf("잘못 선택하셨습니다\n");
+            CheckConfimed();
         }
     }
 }

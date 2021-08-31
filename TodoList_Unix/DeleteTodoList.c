@@ -5,6 +5,8 @@
 
 int DeleteTodoList(int ListNum) //int형으로 변경
 {
+    int result;
+
     system("clear");
 
     if (ListNum == 0)
@@ -15,9 +17,19 @@ int DeleteTodoList(int ListNum) //int형으로 변경
         return 1; // 추가
     }
 
+    result = ShowChooseMenu(ListNum);
+
+    if (result == 1)
+    {
+        return 0;
+    }
+
+    system("clear");
+
     ShowMyList(ListNum);
 
     int num;
+
     while (1)
     {
         printf("삭제할 일정의 번호를 입력하세요 : ");

@@ -97,7 +97,7 @@ void ModifyDate(int selectIdx)
     }
 }
 
-void EditDate(int LastListIdx)
+void EditDate()
 {
     int selectIdx;
     selectIdx = myList->TemporaryIdx;

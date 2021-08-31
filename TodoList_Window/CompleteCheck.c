@@ -65,7 +65,7 @@ int CompleteCheck(int ListNum, int CompNum) //int 형으로 변경
 
     if (result == 1)
     {
-        return;
+        return 0;
     }
 
     system("cls");

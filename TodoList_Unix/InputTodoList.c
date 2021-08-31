@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#pragma warning(disable : 4996)
 
 void Input_Title(int LastListIdx)
 {
@@ -45,8 +46,6 @@ void Input_Date(int LastListIdx)
 					printf("다시입력해주세요.\n");
 					while (getchar() != '\n')
 						;
-					printf("아무키나 입력 후 엔터를 눌러주세요.\n");
-					getchar();
 				}
 				else
 				{
@@ -107,8 +106,6 @@ void Set_Importance(int LastListIdx)
 					printf("다시입력해주세요.\n");
 					while (getchar() != '\n')
 						;
-					printf("아무키나 입력 후 엔터를 눌러주세요.\n");
-					getchar();
 				}
 				else
 				{

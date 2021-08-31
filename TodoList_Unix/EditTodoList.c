@@ -18,40 +18,7 @@ void ShowModifyMenu()
     return;
 }
 
-int ShowChooseMenu(int ListNum)
-{
-    int choice;
-
-    while (1)
-    {
-        system("clear");
-        printf("1. 항목 번호 선택하기\n");
-        printf("2. 수정 기능 종료\n");
-        printf("선택 : ");
-
-        getchar();
-
-        scanf("%d", &choice);
-
-        if (choice == 1)
-        {
-            Select_IDX_In_List(ListNum);
-            return 0;
-        }
-        else if (choice == 2)
-        {
-            return 1;
-        }
-        else
-        {
-            printf("\n");
-            printf("잘못선택하셨습니다\n");
-            CheckConfimed();
-        }
-    }
-}
-
-void EditTitle(int LastListIdx)
+void EditTitle()
 {
     int selectIdx;
     selectIdx = myList->TemporaryIdx;
@@ -69,7 +36,7 @@ void EditTitle(int LastListIdx)
     free(input_title);
 }
 
-void EditTodoList(int LastListIdx)
+void EditTodoList(int ListNum)
 {
     int choice;
     int answer;
@@ -87,7 +54,7 @@ void EditTodoList(int LastListIdx)
 
     system("clear");
 
-    if (LastListIdx != 0)
+    if (ListNum != 0)
     {
         printf("\n-------현재 저장되어 있는 항목입니다--------\n");
     }
@@ -95,22 +62,24 @@ void EditTodoList(int LastListIdx)
     // (8 29 추가) showmyList 함수 삭제(2번 중에 1번으로 줄임)
     while (1)
     {
-        if (LastListIdx == 0)
+        if (ListNum == 0)
         {
             printf("저장되어 있는 할 일이 없습니다\n");
             printf("\n");
             CheckConfimed();
             return;
         }
-        // (8 29 추가) Select 함수 추가, 원래는 Edit~ 함수 안에 있던 것을 빼 냄)
-        result = ShowChooseMenu(LastListIdx);
+
+        result = ShowChooseMenu(ListNum);
 
         if (result == 1)
         {
             return;
         }
 
-        // system("clear");
+        Select_IDX_In_List(ListNum);
+
+        system("clear");
 
         while (1)
         {
@@ -126,26 +95,20 @@ void EditTodoList(int LastListIdx)
 
             if (choice == TITLE)
             {
-                EditTitle(LastListIdx);
-                printf("\n");
-                CheckConfimed();
+                EditTitle();
             }
             else if (choice == DATE)
             {
-                EditDate(LastListIdx);
-                printf("\n");
-                CheckConfimed();
+                EditDate();
             }
             else if (choice == IMPORTANCE)
             {
-                EditImportance(LastListIdx);
-                printf("\n");
-                CheckConfimed();
+                EditImportance();
             }
             else if (choice == TERMINATE)
             {
                 printf("\n");
-                printf("수정을 완료하시겠습니다?\n");
+                printf("수정을 완료하시겠습니까?\n");
                 printf("확인 : 1, 취소 : 0\n");
                 scanf("%d", &answer);
 

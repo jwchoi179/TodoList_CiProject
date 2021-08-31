@@ -23,7 +23,7 @@ int DeleteTodoList(int ListNum) //int형으로 변경
 
     if (result == 1)
     {
-        return;
+        return 0;
     }
 
     system("cls");
