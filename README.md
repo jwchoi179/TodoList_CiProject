@@ -22,9 +22,9 @@
 
 | 이름   | Codes                                                                                                                |
 | ------ | -------------------------------------------------------------------------------------------------------------------- |
-| 나세빈 | DeleteTodoList.c, DeleteTodoList.h BasicInfo.c, BasicInfo.h                                                          |
+| 나세빈 | DeleteTodoList.c, DeleteTodoList.h, BasicInfo.c, BasicInfo.h                                                         |
 | 주현아 | CompleteCheck.c, CompleteCheck.h, BasicInfo.c, BasicInfo.h                                                           |
-| 배준혁 | InputTodoList.c, InputTodoList.h EditImportance.c, EditImportance.h, BasicInfo.c, BasicInfo.h                        |
+| 배준혁 | InputTodoList.c, InputTodoList.h, EditImportance.c, EditImportance.h, BasicInfo.c, BasicInfo.h                       |
 | 최지웅 | EditTodoList.c, EditTodoList.h, EditDate.c, EditDate.h, EditImportance.c, EditImportance.h, BasicInfo.c, BasicInfo.h |
 
 ## Duration
